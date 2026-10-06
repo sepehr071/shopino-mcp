@@ -1,6 +1,6 @@
 [project]
 name = "shopino-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "Unofficial read-only MCP server for Shopino: search fashion from thousands of Iranian shops, compare prices, sizes and stock, rate shops, find deals."
 readme = "README.md"
 license = "MIT"
