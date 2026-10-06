@@ -1,0 +1,186 @@
+[
+ {
+  "id": 2200452,
+  "datetime": "2026-04-04T14:38:55.210099+03:30",
+  "title": "4275-مانتو افرا",
+  "category": 385,
+  "website_url": "https://papionlady.com/product/4275-مانتو-افرا",
+  "in_stock": true,
+  "flash_sale": false,
+  "price": 1478000,
+  "discounted_price": 1278000,
+  "medias": [
+   {
+    "id": "2200452_30f97f4e",
+    "url": "https://cdn.shopino.app/media/products/wfull/159830fdb52dadffb73e3654816c6364.webp",
+    "is_video": false,
+    "thumbnail": null,
+    "width": 1125,
+    "height": 1500,
+    "available_widths": [
+     190,
+     380,
+     280,
+     560,
+     420,
+     840
+    ],
+    "available_thumbnail_widths": [],
+    "appropriate": true
+   }
+  ],
+  "preview_video": null,
+  "shop": {
+   "source": "website",
+   "id": 489,
+   "title": "پاپیون لیدی",
+   "username": "papionlady",
+   "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/08b3a31f2fe089f62f2d0b76ed145957.svg",
+   "is_verified": false,
+   "direct_purchase_enabled": true,
+   "rating": 4.9,
+   "fast_delivery_city": "قم",
+   "surveys_count": 3507
+  },
+  "campaign_id": null,
+  "promotion_tag": null
+ },
+ {
+  "id": 2673858,
+  "datetime": "2026-10-03T12:10:13.265935+03:30",
+  "title": "مانتو کتان پاییزه کارن 3 (با قد بلندتر)",
+  "category": 385,
+  "website_url": "https://aysoocollection.com/product/مانتو-کتان-پاییزه-کارن-3-(با-قد-بلندتر)",
+  "in_stock": true,
+  "flash_sale": false,
+  "price": 1598000,
+  "discounted_price": null,
+  "medias": [
+   {
+    "id": "2673858_1cf5150a",
+    "url": "https://cdn.shopino.app/media/products/wfull/d2fc16c2a580e058c8de32da84354773.webp",
+    "is_video": false,
+    "thumbnail": null,
+    "width": 1125,
+    "height": 1500,
+    "available_widths": [
+     190,
+     380,
+     280,
+     560,
+     420,
+     840
+    ],
+    "available_thumbnail_widths": [],
+    "appropriate": true
+   }
+  ],
+  "preview_video": null,
+  "shop": {
+   "source": "website",
+   "id": 666,
+   "title": "آیسو کالکشن - پوشاک جلیلوند",
+   "username": "aysoocollection",
+   "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/ce15b11db76036b70145ebe90567a3b8.svg",
+   "is_verified": false,
+   "direct_purchase_enabled": true,
+   "rating": 4.8,
+   "fast_delivery_city": "",
+   "surveys_count": 4895
+  },
+  "campaign_id": null,
+  "promotion_tag": null
+ },
+ {
+  "id": 2652680,
+  "datetime": "2026-09-25T20:31:18.032066+03:30",
+  "title": "مانتو پاییزه آیسو مانلی",
+  "category": 385,
+  "website_url": "https://aysoocollection.com/product/مانتو-پاییزه-یقه-چین-آیسو-مانلی-3",
+  "in_stock": true,
+  "flash_sale": false,
+  "price": 1898000,
+  "discounted_price": null,
+  "medias": [
+   {
+    "id": "2652680_416e3006",
+    "url": "https://cdn.shopino.app/media/products/wfull/9f4490cc0827a7779602711ea16accff.webp",
+    "is_video": false,
+    "thumbnail": null,
+    "width": 1086,
+    "height": 1432,
+    "available_widths": [
+     190,
+     380,
+     280,
+     560,
+     420,
+     840
+    ],
+    "available_thumbnail_widths": [],
+    "appropriate": true
+   }
+  ],
+  "preview_video": null,
+  "shop": {
+   "source": "website",
+   "id": 666,
+   "title": "آیسو کالکشن - پوشاک جلیلوند",
+   "username": "aysoocollection",
+   "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/ce15b11db76036b70145ebe90567a3b8.svg",
+   "is_verified": false,
+   "direct_purchase_enabled": true,
+   "rating": 4.8,
+   "fast_delivery_city": "",
+   "surveys_count": 4895
+  },
+  "campaign_id": null,
+  "promotion_tag": null
+ },
+ {
+  "id": 2650608,
+  "datetime": "2026-09-24T10:31:20.643061+03:30",
+  "title": "مانتو کتان ابریشمی والریا(ایراد دار)",
+  "category": 385,
+  "website_url": "https://aysoocollection.com/product/مانتو-کتان-ابریشمی-والریا(ایراد-دار)",
+  "in_stock": true,
+  "flash_sale": false,
+  "price": 1998000,
+  "discounted_price": 1198000,
+  "medias": [
+   {
+    "id": "2650608_3beef843",
+    "url": "https://cdn.shopino.app/media/products/wfull/f5909741132e2235c7b3867c498dcf75.webp",
+    "is_video": false,
+    "thumbnail": null,
+    "width": 1124,
+    "height": 1500,
+    "available_widths": [
+     190,
+     380,
+     280,
+     560,
+     420,
+     840
+    ],
+    "available_thumbnail_widths": [],
+    "appropriate": true
+   }
+  ],
+  "preview_video": null,
+  "shop": {
+   "source": "website",
+   "id": 666,
+   "title": "آیسو کالکشن - پوشاک جلیلوند",
+   "username": "aysoocollection",
+   "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/ce15b11db76036b70145ebe90567a3b8.svg",
+   "is_verified": false,
+   "direct_purchase_enabled": true,
+   "rating": 4.8,
+   "fast_delivery_city": "",
+   "surveys_count": 4895
+  },
+  "campaign_id": null,
+  "promotion_tag": null
+ }
+]

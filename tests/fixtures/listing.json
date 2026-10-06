@@ -1,0 +1,206 @@
+{
+ "next": "https://api.shopino.app/api/v1/app/product-listings/%D9%BE%DB%8C%D8%B1%D8%A7%D9%87%D9%86-%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87/products/?limit=4&offset=4",
+ "previous": null,
+ "results": [
+  {
+   "id": 1997675,
+   "datetime": "2025-12-16T16:44:48.307640+03:30",
+   "title": "پیراهن آستین بلند کنفی مردانه مدل 61011028",
+   "category": 388,
+   "website_url": "https://panel.beniix.ir/products/4595",
+   "flash_sale": false,
+   "price": 1980000,
+   "discounted_price": 950000,
+   "in_stock": true,
+   "medias": [
+    {
+     "id": "1997675_b4f2929c",
+     "url": "https://cdn.shopino.app/media/products/wfull/b4f2929c2b1e2d13c8b4b88ea0d15d0f.webp",
+     "is_video": false,
+     "thumbnail": null,
+     "width": 1000,
+     "height": 1000,
+     "available_widths": [
+      190,
+      380,
+      280,
+      560,
+      420,
+      840
+     ],
+     "available_thumbnail_widths": [],
+     "appropriate": true
+    }
+   ],
+   "preview_video": null,
+   "shop": {
+    "source": "website",
+    "id": 1213,
+    "title": "بنیکس",
+    "username": "beniix",
+    "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/4a74b2af652f4dea6b56f7c52261c0e4.webp",
+    "is_verified": false,
+    "direct_purchase_enabled": true,
+    "rating": 4.2,
+    "fast_delivery_city": "",
+    "surveys_count": 296
+   },
+   "campaign_id": null,
+   "promotion_tag": {
+    "id": 51,
+    "title": "1 میلیون تخفیف با کد: benix7",
+    "priority": 0
+   }
+  },
+  {
+   "id": 2001036,
+   "datetime": "2025-12-20T02:03:52.087263+03:30",
+   "title": "پیراهن مجلسی سفید مردانه پارچه دوشین دوخت صنعتی یقه خرگوشی",
+   "category": 388,
+   "website_url": "https://originaldeylam.ir/product/6606",
+   "flash_sale": false,
+   "price": 2950000,
+   "discounted_price": 2350000,
+   "in_stock": true,
+   "medias": [
+    {
+     "id": "2001036_a4656f05",
+     "url": "https://cdn.shopino.app/media/products/wfull/a4656f05bd3df64f147a7dffa9d7a123.webp",
+     "is_video": false,
+     "thumbnail": null,
+     "width": 1220,
+     "height": 1491,
+     "available_widths": [
+      190,
+      380,
+      280,
+      560,
+      420,
+      840
+     ],
+     "available_thumbnail_widths": [],
+     "appropriate": true
+    }
+   ],
+   "preview_video": null,
+   "shop": {
+    "source": "website",
+    "id": 1693,
+    "title": "اورجینال دیلم",
+    "username": "originaldeylam",
+    "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/4efc4eca91befe3a14e5e0be4e2a0c55.webp",
+    "is_verified": false,
+    "direct_purchase_enabled": true,
+    "rating": 4.7,
+    "fast_delivery_city": "",
+    "surveys_count": 141
+   },
+   "campaign_id": null,
+   "promotion_tag": {
+    "id": 49,
+    "title": "1 میلیون تخفیف با کد: deylam7",
+    "priority": 0
+   }
+  },
+  {
+   "id": 1997875,
+   "datetime": "2025-12-16T16:54:57.573485+03:30",
+   "title": "پیراهن آستین بلند ساده مردانه مدل 61029127",
+   "category": 388,
+   "website_url": "https://panel.beniix.ir/products/9848",
+   "flash_sale": false,
+   "price": 1280000,
+   "discounted_price": 1078000,
+   "in_stock": true,
+   "medias": [
+    {
+     "id": "1997875_dffc1d1d",
+     "url": "https://cdn.shopino.app/media/products/wfull/dffc1d1d5831e2a3b74eb0fa7dca5aed.webp",
+     "is_video": false,
+     "thumbnail": null,
+     "width": 2000,
+     "height": 2000,
+     "available_widths": [
+      190,
+      380,
+      280,
+      560,
+      420,
+      840
+     ],
+     "available_thumbnail_widths": [],
+     "appropriate": true
+    }
+   ],
+   "preview_video": null,
+   "shop": {
+    "source": "website",
+    "id": 1213,
+    "title": "بنیکس",
+    "username": "beniix",
+    "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/4a74b2af652f4dea6b56f7c52261c0e4.webp",
+    "is_verified": false,
+    "direct_purchase_enabled": true,
+    "rating": 4.2,
+    "fast_delivery_city": "",
+    "surveys_count": 296
+   },
+   "campaign_id": null,
+   "promotion_tag": {
+    "id": 51,
+    "title": "1 میلیون تخفیف با کد: benix7",
+    "priority": 0
+   }
+  },
+  {
+   "id": 1081734,
+   "datetime": "2024-10-30T04:04:06.992031+03:30",
+   "title": "پیراهن سفید مردانه دکمه مخفی دوخت صنعتی - اورجینال دیلم",
+   "category": 388,
+   "website_url": "https://originaldeylam.ir/product/1363",
+   "flash_sale": false,
+   "price": 2680000,
+   "discounted_price": 1980000,
+   "in_stock": true,
+   "medias": [
+    {
+     "id": "1081734_8207a06c",
+     "url": "https://cdn.shopino.app/media/products/wfull/8207a06c7e59a3d4cfab8c2bc43ed059.jpg",
+     "is_video": false,
+     "thumbnail": null,
+     "width": 886,
+     "height": 896,
+     "available_widths": [
+      190,
+      380,
+      280,
+      560,
+      420,
+      840
+     ],
+     "available_thumbnail_widths": [],
+     "appropriate": true
+    }
+   ],
+   "preview_video": null,
+   "shop": {
+    "source": "website",
+    "id": 1693,
+    "title": "اورجینال دیلم",
+    "username": "originaldeylam",
+    "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/4efc4eca91befe3a14e5e0be4e2a0c55.webp",
+    "is_verified": false,
+    "direct_purchase_enabled": true,
+    "rating": 4.7,
+    "fast_delivery_city": "",
+    "surveys_count": 141
+   },
+   "campaign_id": null,
+   "promotion_tag": {
+    "id": 49,
+    "title": "1 میلیون تخفیف با کد: deylam7",
+    "priority": 0
+   }
+  }
+ ]
+}

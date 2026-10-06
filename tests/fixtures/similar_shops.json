@@ -1,0 +1,50 @@
+[
+ {
+  "id": 8211,
+  "username": "maroya",
+  "title": "مارویا",
+  "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/04b5d84d287652201fa9592b0de754e2.webp",
+  "followers": 0,
+  "is_verified": false,
+  "rating": 0.0,
+  "fast_delivery_city": "",
+  "direct_purchase_enabled": true,
+  "surveys_count": 0,
+  "products_count": 226,
+  "city": null,
+  "campaign_id": null,
+  "saved": false
+ },
+ {
+  "id": 2105,
+  "username": "tannazahmadigallery",
+  "title": "مزون طناز احمدی",
+  "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/e2a6e4a7c40a328fb5512bbef2d97291.webp",
+  "followers": 0,
+  "is_verified": false,
+  "rating": 0.0,
+  "fast_delivery_city": "تهران",
+  "direct_purchase_enabled": true,
+  "surveys_count": 0,
+  "products_count": 172,
+  "city": null,
+  "campaign_id": null,
+  "saved": false
+ },
+ {
+  "id": 9398,
+  "username": "benis",
+  "title": "بنیس",
+  "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/11138d3e7d1c4b0ba10209b01f0d457f.webp",
+  "followers": 0,
+  "is_verified": false,
+  "rating": 0.0,
+  "fast_delivery_city": "",
+  "direct_purchase_enabled": true,
+  "surveys_count": 0,
+  "products_count": 276,
+  "city": null,
+  "campaign_id": null,
+  "saved": false
+ }
+]

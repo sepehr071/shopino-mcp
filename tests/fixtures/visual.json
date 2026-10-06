@@ -1,0 +1,281 @@
+{
+ "next": "https://api-go.shopino.app/api/v1/app/post-medias/2578018_05861e2e/similar-products/?h=0.95&offset=100&w=0.95&x=0.025&y=0.025",
+ "results": [
+  {
+   "id": 2578018,
+   "datetime": "2026-09-06T09:38:51.472764+03:30",
+   "title": "4275-مانتو افرا",
+   "category": 385,
+   "website_url": "https://papionlady.com/product/4275-مانتو-افرا-1",
+   "in_stock": true,
+   "flash_sale": false,
+   "price": 1478000,
+   "discounted_price": 1000000,
+   "medias": [
+    {
+     "id": "2578018_05861e2e",
+     "url": "https://cdn.shopino.app/media/products/wfull/5bccb63d335c34aa2a03e0ac4215451b.webp",
+     "is_video": false,
+     "thumbnail": null,
+     "width": 1125,
+     "height": 1500,
+     "available_widths": [
+      190,
+      380,
+      280,
+      560,
+      420,
+      840
+     ],
+     "available_thumbnail_widths": [],
+     "appropriate": true
+    }
+   ],
+   "preview_video": null,
+   "shop": {
+    "source": "website",
+    "id": 489,
+    "title": "پاپیون لیدی",
+    "username": "papionlady",
+    "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/08b3a31f2fe089f62f2d0b76ed145957.svg",
+    "is_verified": false,
+    "direct_purchase_enabled": true,
+    "rating": 4.9,
+    "fast_delivery_city": "قم",
+    "surveys_count": 3507
+   },
+   "campaign_id": null,
+   "promotion_tag": null
+  },
+  {
+   "id": 2200452,
+   "datetime": "2026-04-04T14:38:55.210099+03:30",
+   "title": "4275-مانتو افرا",
+   "category": 385,
+   "website_url": "https://papionlady.com/product/4275-مانتو-افرا",
+   "in_stock": true,
+   "flash_sale": false,
+   "price": 1478000,
+   "discounted_price": 1278000,
+   "medias": [
+    {
+     "id": "2200452_517ab927",
+     "url": "https://cdn.shopino.app/media/products/wfull/e7d405dc0a852c9ba333f1140ddda969.webp",
+     "is_video": false,
+     "thumbnail": null,
+     "width": 1125,
+     "height": 1500,
+     "available_widths": [
+      190,
+      380,
+      280,
+      560,
+      420,
+      840
+     ],
+     "available_thumbnail_widths": [],
+     "appropriate": true
+    }
+   ],
+   "preview_video": null,
+   "shop": {
+    "source": "website",
+    "id": 489,
+    "title": "پاپیون لیدی",
+    "username": "papionlady",
+    "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/08b3a31f2fe089f62f2d0b76ed145957.svg",
+    "is_verified": false,
+    "direct_purchase_enabled": true,
+    "rating": 4.9,
+    "fast_delivery_city": "قم",
+    "surveys_count": 3507
+   },
+   "campaign_id": null,
+   "promotion_tag": null
+  },
+  {
+   "id": 2338404,
+   "datetime": "2026-06-04T15:45:55.331495+03:30",
+   "title": "4490-شومیز گلنوش ( ایراددار )",
+   "category": 379,
+   "website_url": "https://papionlady.com/product/4490-شومیز-گلنوش-(-ایراددار-)",
+   "in_stock": true,
+   "flash_sale": false,
+   "price": 998000,
+   "discounted_price": 749000,
+   "medias": [
+    {
+     "id": "2338404_c715ae12",
+     "url": "https://cdn.shopino.app/media/products/wfull/c715ae12d42fd8b97d3fcac7da124671.webp",
+     "is_video": false,
+     "thumbnail": null,
+     "width": 1125,
+     "height": 1500,
+     "available_widths": [
+      190,
+      380,
+      280,
+      560,
+      420,
+      840
+     ],
+     "available_thumbnail_widths": [],
+     "appropriate": true
+    }
+   ],
+   "preview_video": null,
+   "shop": {
+    "source": "website",
+    "id": 489,
+    "title": "پاپیون لیدی",
+    "username": "papionlady",
+    "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/08b3a31f2fe089f62f2d0b76ed145957.svg",
+    "is_verified": false,
+    "direct_purchase_enabled": true,
+    "rating": 4.9,
+    "fast_delivery_city": "قم",
+    "surveys_count": 3507
+   },
+   "campaign_id": null,
+   "promotion_tag": null
+  },
+  {
+   "id": 2385639,
+   "datetime": "2026-06-15T17:14:40.940904+03:30",
+   "title": "6547-تونیک مانتویی طلوع",
+   "category": 366,
+   "website_url": "https://papionlady.com/product/6547-تونیک-مانتویی-طلوع",
+   "in_stock": true,
+   "flash_sale": false,
+   "price": 1398000,
+   "discounted_price": 800000,
+   "medias": [
+    {
+     "id": "2385639_3bd59c79",
+     "url": "https://cdn.shopino.app/media/products/wfull/8ad3b8197bce6dd69bc53f1a8d355e2a.webp",
+     "is_video": false,
+     "thumbnail": null,
+     "width": 1125,
+     "height": 1500,
+     "available_widths": [
+      190,
+      380,
+      280,
+      560,
+      420,
+      840
+     ],
+     "available_thumbnail_widths": [],
+     "appropriate": true
+    }
+   ],
+   "preview_video": null,
+   "shop": {
+    "source": "website",
+    "id": 489,
+    "title": "پاپیون لیدی",
+    "username": "papionlady",
+    "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/08b3a31f2fe089f62f2d0b76ed145957.svg",
+    "is_verified": false,
+    "direct_purchase_enabled": true,
+    "rating": 4.9,
+    "fast_delivery_city": "قم",
+    "surveys_count": 3507
+   },
+   "campaign_id": null,
+   "promotion_tag": null
+  },
+  {
+   "id": 2518506,
+   "datetime": "2026-08-10T16:48:46.902437+03:30",
+   "title": "6958-شومیز آیما",
+   "category": 379,
+   "website_url": "https://papionlady.com/product/6958-شومیز-آیما",
+   "in_stock": true,
+   "flash_sale": false,
+   "price": 699000,
+   "discounted_price": 624000,
+   "medias": [
+    {
+     "id": "2518506_bf56a30d",
+     "url": "https://cdn.shopino.app/media/products/wfull/20aeb9344fae5d625ea1db2adafab1a6.webp",
+     "is_video": false,
+     "thumbnail": null,
+     "width": 960,
+     "height": 1280,
+     "available_widths": [
+      190,
+      380,
+      280,
+      560,
+      420,
+      840
+     ],
+     "available_thumbnail_widths": [],
+     "appropriate": true
+    }
+   ],
+   "preview_video": null,
+   "shop": {
+    "source": "website",
+    "id": 489,
+    "title": "پاپیون لیدی",
+    "username": "papionlady",
+    "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/08b3a31f2fe089f62f2d0b76ed145957.svg",
+    "is_verified": false,
+    "direct_purchase_enabled": true,
+    "rating": 4.9,
+    "fast_delivery_city": "قم",
+    "surveys_count": 3507
+   },
+   "campaign_id": null,
+   "promotion_tag": null
+  },
+  {
+   "id": 2272828,
+   "datetime": "2026-05-16T20:02:44.793888+03:30",
+   "title": "4532-شومیز دیما",
+   "category": 379,
+   "website_url": "https://papionlady.com/product/4532-شومیز-دیما",
+   "in_stock": true,
+   "flash_sale": false,
+   "price": 998000,
+   "discounted_price": 700000,
+   "medias": [
+    {
+     "id": "2272828_4eebb06c",
+     "url": "https://cdn.shopino.app/media/products/wfull/4eebb06c8581f42897333560b920c4d1.webp",
+     "is_video": false,
+     "thumbnail": null,
+     "width": 1125,
+     "height": 1500,
+     "available_widths": [
+      190,
+      380,
+      280,
+      560,
+      420,
+      840
+     ],
+     "available_thumbnail_widths": [],
+     "appropriate": true
+    }
+   ],
+   "preview_video": null,
+   "shop": {
+    "source": "website",
+    "id": 489,
+    "title": "پاپیون لیدی",
+    "username": "papionlady",
+    "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/08b3a31f2fe089f62f2d0b76ed145957.svg",
+    "is_verified": false,
+    "direct_purchase_enabled": true,
+    "rating": 4.9,
+    "fast_delivery_city": "قم",
+    "surveys_count": 3507
+   },
+   "campaign_id": null,
+   "promotion_tag": null
+  }
+ ]
+}

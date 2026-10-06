@@ -1,0 +1,458 @@
+[
+ {
+  "color": "#09b563",
+  "ends_at": "2026-10-06T08:30:00Z",
+  "flash_sale": true,
+  "id": 1,
+  "image": null,
+  "position": 0,
+  "products": [
+   {
+    "id": 2533943,
+    "datetime": "2026-08-19T13:18:47.655467+03:30",
+    "title": "کیف زنانه سوییت فلیکس",
+    "category": 301,
+    "website_url": "https://hana-gallery.ir/product/%da%a9%db%8c%d9%81-%d8%b2%d9%86%d8%a7%d9%86%d9%87-%d8%b3%d9%88%db%8c%db%8c%d8%aa-%d9%81%d9%84%db%8c%da%a9%d8%b3/",
+    "in_stock": true,
+    "flash_sale": true,
+    "price": 3850000,
+    "discounted_price": 1193500,
+    "medias": [
+     {
+      "id": "2533943_622162d4",
+      "url": "https://cdn.shopino.app/media/products/wfull/622162d40b4e27d52fe9508b331e23e5.webp",
+      "is_video": false,
+      "thumbnail": null,
+      "width": 1086,
+      "height": 1448,
+      "available_widths": [
+       190,
+       380,
+       280,
+       560,
+       420,
+       840
+      ],
+      "available_thumbnail_widths": [],
+      "appropriate": true
+     }
+    ],
+    "preview_video": null,
+    "shop": {
+     "source": "website",
+     "id": 2311,
+     "title": "هانا گالری",
+     "username": "hana-gallery",
+     "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/02f2e116469bbb44fc9bb404bddc89f6.webp",
+     "is_verified": false,
+     "direct_purchase_enabled": true,
+     "rating": 0,
+     "fast_delivery_city": "تهران",
+     "surveys_count": 0
+    },
+    "campaign_id": null,
+    "promotion_tag": {
+     "id": 58,
+     "title": "1 میلیون تخفیف با کد: hana70"
+    }
+   },
+   {
+    "id": 2563559,
+    "datetime": "2026-09-01T17:38:19.474235+03:30",
+    "title": "ست چمدان گوگانا مدل GOOGANA GOOG403080SERIES (نشکن)",
+    "category": 445,
+    "website_url": "https://123kif.com/product/googana-goog403080series-luggage",
+    "in_stock": true,
+    "flash_sale": true,
+    "price": 49500000,
+    "discounted_price": 17325000,
+    "medias": [
+     {
+      "id": "2563559_664285cb",
+      "url": "https://cdn.shopino.app/media/products/wfull/664285cb95d755ac543b54670e195d39.webp",
+      "is_video": false,
+      "thumbnail": null,
+      "width": 300,
+      "height": 300,
+      "available_widths": [
+       190,
+       380,
+       280,
+       560,
+       420,
+       840
+      ],
+      "available_thumbnail_widths": [],
+      "appropriate": true
+     }
+    ],
+    "preview_video": null,
+    "shop": {
+     "source": "website",
+     "id": 2954,
+     "title": "فوروارد",
+     "username": "forward",
+     "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/d4825ed47e2734650aa8d85eafe84fc0.svg",
+     "is_verified": false,
+     "direct_purchase_enabled": true,
+     "rating": 0,
+     "fast_delivery_city": "تهران",
+     "surveys_count": 0
+    },
+    "campaign_id": null,
+    "promotion_tag": null
+   },
+   {
+    "id": 2425642,
+    "datetime": "2026-07-05T17:52:02.624127+03:30",
+    "title": "کتانی پیاده روی مردانه MOSU Air Sprint M",
+    "category": 286,
+    "website_url": "https://www.sportland.ir/product/81508/کتونی-پیاده-روی-مردانه-mosu-air-sprint-m",
+    "in_stock": true,
+    "flash_sale": true,
+    "price": 9250000,
+    "discounted_price": 3237500,
+    "medias": [
+     {
+      "id": "2425642_951b5053",
+      "url": "https://cdn.shopino.app/media/products/wfull/951b505300d4e272264ec745f7ba38f2.webp",
+      "is_video": false,
+      "thumbnail": null,
+      "width": 1140,
+      "height": 1470,
+      "available_widths": [
+       190,
+       380,
+       280,
+       560,
+       420,
+       840
+      ],
+      "available_thumbnail_widths": [],
+      "appropriate": true
+     }
+    ],
+    "preview_video": null,
+    "shop": {
+     "source": "website",
+     "id": 1920,
+     "title": "اسپورتلند",
+     "username": "sportland",
+     "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/36e432336108114c74f1db06f95c6e18.svg",
+     "is_verified": false,
+     "direct_purchase_enabled": true,
+     "rating": 0,
+     "fast_delivery_city": "",
+     "surveys_count": 0
+    },
+    "campaign_id": null,
+    "promotion_tag": {
+     "id": 50,
+     "title": "1 میلیون تخفیف با کد: sport70"
+    }
+   }
+  ],
+  "title": "<svg>...</svg>",
+  "title_simple": "شگفت‌انگیزها"
+ },
+ {
+  "color": "#47c2ff",
+  "ends_at": null,
+  "flash_sale": false,
+  "id": 2,
+  "image": null,
+  "position": 1,
+  "products": [
+   {
+    "id": 2532207,
+    "datetime": "2026-08-18T19:14:44.092028+03:30",
+    "title": "کیف زنانه بزرگ مدل کینوا",
+    "category": 300,
+    "website_url": "https://taadesign.shop/product/shoulder-bags-code1227",
+    "in_stock": true,
+    "flash_sale": true,
+    "price": 3588000,
+    "discounted_price": 1168000,
+    "medias": [
+     {
+      "id": "2532207_9e952172",
+      "url": "https://cdn.shopino.app/media/products/wfull/9e952172443c3bc3a1a60904f5c87fd5.webp",
+      "is_video": false,
+      "thumbnail": null,
+      "width": 1024,
+      "height": 1024,
+      "available_widths": [
+       190,
+       380,
+       280,
+       560,
+       420,
+       840
+      ],
+      "available_thumbnail_widths": [],
+      "appropriate": true
+     }
+    ],
+    "preview_video": null,
+    "shop": {
+     "source": "website",
+     "id": 381,
+     "title": "تادیزاین",
+     "username": "taadesign",
+     "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/9d6ca08847b6e8ea91fcb75f17cb006a.svg",
+     "is_verified": false,
+     "direct_purchase_enabled": true,
+     "rating": 4.5,
+     "fast_delivery_city": "تهران",
+     "surveys_count": 581
+    },
+    "campaign_id": null,
+    "promotion_tag": null
+   },
+   {
+    "id": 1768910,
+    "datetime": "2025-09-25T16:01:47.66913+03:30",
+    "title": "ونس سارینا 4167",
+    "category": 273,
+    "website_url": "https://shikosize.com/product/6900751",
+    "in_stock": true,
+    "flash_sale": true,
+    "price": 4500000,
+    "discounted_price": 2800000,
+    "medias": [
+     {
+      "id": "1768910_27017e9d",
+      "url": "https://cdn.shopino.app/media/products/wfull/27017e9dbcbfb6c9f922f704635bc850.webp",
+      "is_video": false,
+      "thumbnail": null,
+      "width": 1024,
+      "height": 1024,
+      "available_widths": [
+       190,
+       380,
+       280,
+       560,
+       420,
+       840
+      ],
+      "available_thumbnail_widths": [],
+      "appropriate": true
+     }
+    ],
+    "preview_video": null,
+    "shop": {
+     "source": "website",
+     "id": 1871,
+     "title": "شیکو سایز",
+     "username": "shikosize",
+     "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/3cf7a036952f737ea5bc6b54ddc0ea85.svg",
+     "is_verified": false,
+     "direct_purchase_enabled": true,
+     "rating": 5,
+     "fast_delivery_city": "زنجان",
+     "surveys_count": 107
+    },
+    "campaign_id": null,
+    "promotion_tag": null
+   },
+   {
+    "id": 1616865,
+    "datetime": "2025-08-01T04:00:34.826561+03:30",
+    "title": "چمدان Cincent Karina مدل C40344-S سایز کوچک",
+    "category": 445,
+    "website_url": "https://buykif.ir/product/cincent-karina-c40344-s/",
+    "in_stock": true,
+    "flash_sale": true,
+    "price": 12000000,
+    "discounted_price": 4695000,
+    "medias": [
+     {
+      "id": "1616865_2bf37208",
+      "url": "https://cdn.shopino.app/media/products/wfull/2bf37208841dc9f3bf76daa138ff06cb.webp",
+      "is_video": false,
+      "thumbnail": null,
+      "width": 1080,
+      "height": 1080,
+      "available_widths": [
+       190,
+       380,
+       280,
+       560,
+       420,
+       840
+      ],
+      "available_thumbnail_widths": [],
+      "appropriate": true
+     }
+    ],
+    "preview_video": null,
+    "shop": {
+     "source": "website",
+     "id": 1981,
+     "title": "بای کیف",
+     "username": "buykif",
+     "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/f480935ee1800f9e062402f340653a25.webp",
+     "is_verified": false,
+     "direct_purchase_enabled": true,
+     "rating": 0,
+     "fast_delivery_city": "تهران",
+     "surveys_count": 8
+    },
+    "campaign_id": null,
+    "promotion_tag": null
+   }
+  ],
+  "title": "<svg>...</svg>",
+  "title_simple": "پرفروش‌ترین‌ها"
+ },
+ {
+  "color": "#8b02bd",
+  "ends_at": null,
+  "flash_sale": false,
+  "id": 90,
+  "image": null,
+  "position": 2,
+  "products": [
+   {
+    "id": 2603898,
+    "datetime": "2026-09-09T13:05:04.306304+03:30",
+    "title": "وست جین آبی",
+    "category": 368,
+    "website_url": "https://rakht.ir/وست-جین-آبی-بالاتنه-جین-1",
+    "in_stock": true,
+    "flash_sale": false,
+    "price": 3998000,
+    "discounted_price": null,
+    "medias": [
+     {
+      "id": "2603898_a8f26e13",
+      "url": "https://cdn.shopino.app/media/products/wfull/a8f26e13cb0fb480413c8049ddb513a6.webp",
+      "is_video": false,
+      "thumbnail": null,
+      "width": 960,
+      "height": 1280,
+      "available_widths": [
+       190,
+       380,
+       280,
+       560,
+       420,
+       840
+      ],
+      "available_thumbnail_widths": [],
+      "appropriate": true
+     }
+    ],
+    "preview_video": null,
+    "shop": {
+     "source": "website",
+     "id": 10093,
+     "title": "رخت استور",
+     "username": "rakht",
+     "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/f12180f2a3a0223ab28a8eaf6c98e6c7.webp",
+     "is_verified": false,
+     "direct_purchase_enabled": true,
+     "rating": 0,
+     "fast_delivery_city": "",
+     "surveys_count": 0
+    },
+    "campaign_id": null,
+    "promotion_tag": null
+   },
+   {
+    "id": 2599496,
+    "datetime": "2026-09-07T16:35:57.541328+03:30",
+    "title": "ساعت مچی زنانه کاسیو Casio مدل LTP-V005L-2BUDF اورجینال با بند چرمی سرمه‌ای",
+    "category": 245,
+    "website_url": "https://altinwatch.com/product/casio-ltp-v005l-2budf-women-watch/",
+    "in_stock": true,
+    "flash_sale": false,
+    "price": 8252200,
+    "discounted_price": 7252200,
+    "medias": [
+     {
+      "id": "2599496_55924afe",
+      "url": "https://cdn.shopino.app/media/products/wfull/55924afea35c02ebefae53dd31dcf5c3.webp",
+      "is_video": false,
+      "thumbnail": null,
+      "width": 1000,
+      "height": 1000,
+      "available_widths": [
+       190,
+       380,
+       280,
+       560,
+       420,
+       840
+      ],
+      "available_thumbnail_widths": [],
+      "appropriate": true
+     }
+    ],
+    "preview_video": null,
+    "shop": {
+     "source": "website",
+     "id": 10723,
+     "title": "گالری ساعت آلتین",
+     "username": "altinwatch",
+     "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/05f14e8baabc8825d046cf86b24278e4.webp",
+     "is_verified": false,
+     "direct_purchase_enabled": true,
+     "rating": 0,
+     "fast_delivery_city": "",
+     "surveys_count": 0
+    },
+    "campaign_id": null,
+    "promotion_tag": null
+   },
+   {
+    "id": 2597750,
+    "datetime": "2026-09-07T05:02:46.824538+03:30",
+    "title": "کفش ونس اولد اسکول مردانه و زنانه رنگ مشکی سفید/کد176",
+    "category": 273,
+    "website_url": "https://rovanstyle.com/product/mens-and-womens-vans-old-skool-sneakers-in-black-and-white-code-176/",
+    "in_stock": true,
+    "flash_sale": false,
+    "price": 2980000,
+    "discounted_price": 2860000,
+    "medias": [
+     {
+      "id": "2597750_3b6550d0",
+      "url": "https://cdn.shopino.app/media/products/wfull/3b6550d0b35e2432145ad48614823ec4.webp",
+      "is_video": false,
+      "thumbnail": null,
+      "width": 1254,
+      "height": 1254,
+      "available_widths": [
+       190,
+       380,
+       280,
+       560,
+       420,
+       840
+      ],
+      "available_thumbnail_widths": [],
+      "appropriate": true
+     }
+    ],
+    "preview_video": null,
+    "shop": {
+     "source": "website",
+     "id": 10519,
+     "title": "رُوان استایل",
+     "username": "rovanstyle",
+     "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/20ac528281e4dd27c4a2046be9f7f81a.webp",
+     "is_verified": false,
+     "direct_purchase_enabled": true,
+     "rating": 0,
+     "fast_delivery_city": "",
+     "surveys_count": 0
+    },
+    "campaign_id": null,
+    "promotion_tag": null
+   }
+  ],
+  "title": "<svg>...</svg>",
+  "title_simple": "جدیدترین‌ها"
+ }
+]

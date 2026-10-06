@@ -1,0 +1,21 @@
+{
+ "next": null,
+ "results": [
+  {
+   "campaign_id": null,
+   "city": null,
+   "direct_purchase_enabled": true,
+   "fast_delivery_city": "قم",
+   "followers": 2119755,
+   "id": 489,
+   "is_verified": false,
+   "products_count": 6738,
+   "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/08b3a31f2fe089f62f2d0b76ed145957.svg",
+   "rating": 4.9,
+   "saved": false,
+   "surveys_count": 3507,
+   "title": "پاپیون لیدی",
+   "username": "papionlady"
+  }
+ ]
+}

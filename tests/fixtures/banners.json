@@ -1,0 +1,38 @@
+[
+ {
+  "id": 603,
+  "show_in_home_page": true,
+  "target_url": "https://shopino.app/landing/sale07",
+  "categories": []
+ },
+ {
+  "id": 590,
+  "show_in_home_page": true,
+  "target_url": "https://shopino.app/shops/1213",
+  "categories": []
+ },
+ {
+  "id": 596,
+  "show_in_home_page": true,
+  "target_url": "https://shopino.app/landing/sale07",
+  "categories": []
+ },
+ {
+  "id": 600,
+  "show_in_home_page": true,
+  "target_url": "https://shopino.app/landing/gift-cards",
+  "categories": []
+ },
+ {
+  "id": 588,
+  "show_in_home_page": false,
+  "target_url": "https://shopino.app/shops/9146",
+  "categories": []
+ },
+ {
+  "id": 593,
+  "show_in_home_page": true,
+  "target_url": "https://shopino.app/shops/10093",
+  "categories": []
+ }
+]

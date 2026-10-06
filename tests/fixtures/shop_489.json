@@ -1,0 +1,59 @@
+{
+ "brands": [],
+ "customer_rating": {
+  "value": 4.4,
+  "count": 3725
+ },
+ "description": "",
+ "direct_purchase_enabled": true,
+ "fast_delivery_city": "قم",
+ "followers": 2119755,
+ "id": 489,
+ "instagram_username": "papion.lady",
+ "is_verified": false,
+ "landline_phone": "32890754",
+ "landline_phone_prefix": "025",
+ "main_categories": [
+  379,
+  377,
+  381,
+  376
+ ],
+ "mobile_phone": null,
+ "product_count_by_category": [
+  {
+   "category": 377,
+   "count": 565
+  },
+  {
+   "category": 379,
+   "count": 295
+  },
+  {
+   "category": 381,
+   "count": 284
+  },
+  {
+   "category": 376,
+   "count": 246
+  }
+ ],
+ "products_count": 2939,
+ "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/08b3a31f2fe089f62f2d0b76ed145957.svg",
+ "rating": 4.9,
+ "saved": false,
+ "show_banners": false,
+ "source": "ibrand",
+ "survey_report": {
+  "customer_satisfaction": 92.3579359895493,
+  "positive_high_quality": 96.56357388316151,
+  "positive_low_price": 95.71865443425077,
+  "positive_timely_delivery": 95.1048951048951
+ },
+ "surveys_count": 3507,
+ "telegram_id": null,
+ "title": "پاپیون لیدی",
+ "username": "papionlady",
+ "website": "https://papionlady.com",
+ "whatsapp_number": null
+}

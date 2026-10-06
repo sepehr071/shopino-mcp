@@ -1,0 +1,416 @@
+{
+ "category": null,
+ "components": [
+  {
+   "id": 26,
+   "position": 0,
+   "product_slider": {
+    "color": "#0ab563",
+    "ends_at": null,
+    "flash_sale": false,
+    "id": 201,
+    "image": null,
+    "position": null,
+    "products": [
+     {
+      "id": 1921133,
+      "datetime": "2025-11-15T18:34:10.085453+03:30",
+      "title": "کفش اسپرت زنانه نیکلاس کد 1000",
+      "category": 273,
+      "website_url": "https://nicolasleather.com/product-detail/8105",
+      "in_stock": true,
+      "flash_sale": true,
+      "price": 16555200,
+      "discounted_price": 4966560,
+      "medias": [
+       {
+        "id": "1921133_3ea7d775",
+        "url": "https://cdn.shopino.app/media/products/wfull/3ea7d775958e1e5a76c27598b5dcc94b.webp",
+        "is_video": false,
+        "thumbnail": null,
+        "width": 1500,
+        "height": 1500,
+        "available_widths": [
+         190,
+         380,
+         280,
+         560,
+         420,
+         840
+        ],
+        "available_thumbnail_widths": [],
+        "appropriate": true
+       }
+      ],
+      "preview_video": null,
+      "shop": {
+       "source": "website",
+       "id": 1784,
+       "title": "چرم نیکلاس",
+       "username": "nicolasleather",
+       "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/38656c2db2e443b20ba22749779420e3.svg",
+       "is_verified": false,
+       "direct_purchase_enabled": true,
+       "rating": 0,
+       "fast_delivery_city": "تهران",
+       "surveys_count": 13
+      },
+      "campaign_id": null,
+      "promotion_tag": {
+       "id": 47,
+       "title": "2 میلیون تخفیف با کد: nicolas7"
+      }
+     },
+     {
+      "id": 2227443,
+      "datetime": "2026-04-26T16:51:53.099438+03:30",
+      "title": "تیشرت آستین کوتاه بافت مردانه مدل 6512065",
+      "category": 389,
+      "website_url": "https://panel.beniix.ir/products/2555",
+      "in_stock": true,
+      "flash_sale": false,
+      "price": 1980000,
+      "discounted_price": 750000,
+      "medias": [
+       {
+        "id": "2227443_45700abd",
+        "url": "https://cdn.shopino.app/media/products/wfull/45700abdd5e100d29045f5c543c4fa46.webp",
+        "is_video": false,
+        "thumbnail": null,
+        "width": 1254,
+        "height": 1254,
+        "available_widths": [
+         190,
+         380,
+         280,
+         560,
+         420,
+         840
+        ],
+        "available_thumbnail_widths": [],
+        "appropriate": true
+       }
+      ],
+      "preview_video": null,
+      "shop": {
+       "source": "website",
+       "id": 1213,
+       "title": "بنیکس",
+       "username": "beniix",
+       "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/4a74b2af652f4dea6b56f7c52261c0e4.webp",
+       "is_verified": false,
+       "direct_purchase_enabled": true,
+       "rating": 4.2,
+       "fast_delivery_city": "",
+       "surveys_count": 296
+      },
+      "campaign_id": null,
+      "promotion_tag": {
+       "id": 51,
+       "title": "1 میلیون تخفیف با کد: benix7"
+      }
+     },
+     {
+      "id": 2425538,
+      "datetime": "2026-07-05T17:51:36.475957+03:30",
+      "title": "نیم‌تنه ورزشی زنانه Red Style Red Pearl W",
+      "category": 365,
+      "website_url": "https://www.sportland.ir/product/80580/نیم-تنه-ورزشی-زنانه-red-style-red-pearl-w",
+      "in_stock": true,
+      "flash_sale": false,
+      "price": 2850000,
+      "discounted_price": 2280000,
+      "medias": [
+       {
+        "id": "2425538_41c97705",
+        "url": "https://cdn.shopino.app/media/products/wfull/41c977056b2ff01d8f33ac6f5137f34e.webp",
+        "is_video": false,
+        "thumbnail": null,
+        "width": 1140,
+        "height": 1470,
+        "available_widths": [
+         190,
+         380,
+         280,
+         560,
+         420,
+         840
+        ],
+        "available_thumbnail_widths": [],
+        "appropriate": true
+       }
+      ],
+      "preview_video": null,
+      "shop": {
+       "source": "website",
+       "id": 1920,
+       "title": "اسپورتلند",
+       "username": "sportland",
+       "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/36e432336108114c74f1db06f95c6e18.svg",
+       "is_verified": false,
+       "direct_purchase_enabled": true,
+       "rating": 0,
+       "fast_delivery_city": "",
+       "surveys_count": 0
+      },
+      "campaign_id": null,
+      "promotion_tag": {
+       "id": 50,
+       "title": "1 میلیون تخفیف با کد: sport70"
+      }
+     }
+    ],
+    "title": "<span>...</span>",
+    "title_simple": "لباس میخری با تخفیف بالا"
+   },
+   "type": "product_slider"
+  },
+  {
+   "id": 29,
+   "position": 1,
+   "tabs": [
+    {
+     "banners": [],
+     "category_id": null,
+     "filters": "",
+     "flash_sale": false,
+     "id": 38,
+     "listing_slug": "چرمی-های-پاییزه",
+     "page_size": 10,
+     "position": 0,
+     "shop_id": null,
+     "title": "چرمی‌های پاییزه"
+    },
+    {
+     "banners": [],
+     "category_id": null,
+     "filters": "",
+     "flash_sale": false,
+     "id": 20,
+     "listing_slug": "شومیز-زنانه-پرفروش",
+     "page_size": 10,
+     "position": 1,
+     "shop_id": null,
+     "title": "شومیز زنانه"
+    },
+    {
+     "banners": [],
+     "category_id": null,
+     "filters": "",
+     "flash_sale": false,
+     "id": 39,
+     "listing_slug": null,
+     "page_size": 10,
+     "position": 2,
+     "shop_id": 7785,
+     "title": "پاییزه‌های جدید"
+    },
+    {
+     "banners": [],
+     "category_id": null,
+     "filters": "",
+     "flash_sale": false,
+     "id": 22,
+     "listing_slug": null,
+     "page_size": 10,
+     "position": 3,
+     "shop_id": 8067,
+     "title": "لباس زیر و ورزشی"
+    },
+    {
+     "banners": [],
+     "category_id": null,
+     "filters": "",
+     "flash_sale": false,
+     "id": 19,
+     "listing_slug": "کت-زنانه",
+     "page_size": 10,
+     "position": 4,
+     "shop_id": null,
+     "title": "کت زنانه"
+    },
+    {
+     "banners": [],
+     "category_id": null,
+     "filters": "",
+     "flash_sale": false,
+     "id": 21,
+     "listing_slug": "شلوار-زنانه",
+     "page_size": 10,
+     "position": 5,
+     "shop_id": null,
+     "title": "شلوار زنانه"
+    }
+   ],
+   "type": "product_listing_tabs"
+  },
+  {
+   "id": 28,
+   "position": 2,
+   "product_slider": {
+    "color": "#0ab563",
+    "ends_at": null,
+    "flash_sale": false,
+    "id": 202,
+    "image": null,
+    "position": null,
+    "products": [
+     {
+      "id": 2425463,
+      "datetime": "2026-07-05T17:50:28.004991+03:30",
+      "title": "کتانی روزانه زنانه نایک Nike Air Jordan 1 Mid Dark W",
+      "category": 273,
+      "website_url": "https://www.sportland.ir/product/76341/کتونی-روزانه-زنانه-نایک-nike-air-jordan-1-mid-dark-w",
+      "in_stock": true,
+      "flash_sale": false,
+      "price": 7150000,
+      "discounted_price": 4290000,
+      "medias": [
+       {
+        "id": "2425463_c4642861",
+        "url": "https://cdn.shopino.app/media/products/wfull/c464286187a5f725d6b699555f74e6f8.webp",
+        "is_video": false,
+        "thumbnail": null,
+        "width": 1140,
+        "height": 1470,
+        "available_widths": [
+         190,
+         380,
+         280,
+         560,
+         420,
+         840
+        ],
+        "available_thumbnail_widths": [],
+        "appropriate": true
+       }
+      ],
+      "preview_video": null,
+      "shop": {
+       "source": "website",
+       "id": 1920,
+       "title": "اسپورتلند",
+       "username": "sportland",
+       "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/36e432336108114c74f1db06f95c6e18.svg",
+       "is_verified": false,
+       "direct_purchase_enabled": true,
+       "rating": 0,
+       "fast_delivery_city": "",
+       "surveys_count": 0
+      },
+      "campaign_id": null,
+      "promotion_tag": {
+       "id": 50,
+       "title": "1 میلیون تخفیف با کد: sport70"
+      }
+     },
+     {
+      "id": 2449757,
+      "datetime": "2026-07-21T18:45:22.179937+03:30",
+      "title": "کتانی لژدار مردانه قهوه‌ای Men’s Brown Platform Sneakers",
+      "category": 286,
+      "website_url": "https://closet.ir/product/%DA%A9%D8%AA%D9%88%D9%86%DB%8C-%D9%84%DA%98%D8%AF%D8%A7%D8%B1-%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87-%D9%82%D9%87%D9%88%D9%87-%D8%A7%DB%8C-men-s-brown-platform-sneakers",
+      "in_stock": true,
+      "flash_sale": false,
+      "price": 4340000,
+      "discounted_price": 4123000,
+      "medias": [
+       {
+        "id": "2449757_4568b5d6",
+        "url": "https://cdn.shopino.app/media/products/wfull/4568b5d677ee72e24676cd4719a5deeb.webp",
+        "is_video": false,
+        "thumbnail": null,
+        "width": 1287,
+        "height": 1284,
+        "available_widths": [
+         190,
+         380,
+         280,
+         560,
+         420,
+         840
+        ],
+        "available_thumbnail_widths": [],
+        "appropriate": true
+       }
+      ],
+      "preview_video": null,
+      "shop": {
+       "source": "website",
+       "id": 9146,
+       "title": "کلوزت",
+       "username": "closet",
+       "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/84fa7eff547bd183b6e29783d596cdb6.webp",
+       "is_verified": false,
+       "direct_purchase_enabled": true,
+       "rating": 0,
+       "fast_delivery_city": "",
+       "surveys_count": 0
+      },
+      "campaign_id": null,
+      "promotion_tag": {
+       "id": 53,
+       "title": "3 میلیون تخفیف با کد: closet70"
+      }
+     },
+     {
+      "id": 2449698,
+      "datetime": "2026-07-21T18:36:46.795692+03:30",
+      "title": "کفش نایک ایر جردن وان ساق‌دار ربلیونر Nike Air Jordan 1 High OG Rebellionaire",
+      "category": 286,
+      "website_url": "https://closet.ir/product/%DA%A9%D9%81%D8%B4-%D9%86%D8%A7%DB%8C%DA%A9-%D8%A7%DB%8C%D8%B1-%D8%AC%D8%B1%D8%AF%D9%86-%D9%88%D8%A7%D9%86-%D8%B3%D8%A7%D9%82%D8%AF%D8%A7%D8%B1-%D8%B1%D8%A8%D9%84%DB%8C%D9%88%D9%86%D8%B1-nike-air-jordan-1-high-og-rebellionaire",
+      "in_stock": true,
+      "flash_sale": false,
+      "price": 13440000,
+      "discounted_price": 12768000,
+      "medias": [
+       {
+        "id": "2449698_867a66b4",
+        "url": "https://cdn.shopino.app/media/products/wfull/867a66b4b86cc4a37e7b220657adaf62.webp",
+        "is_video": false,
+        "thumbnail": null,
+        "width": 1800,
+        "height": 1800,
+        "available_widths": [
+         190,
+         380,
+         280,
+         560,
+         420,
+         840
+        ],
+        "available_thumbnail_widths": [],
+        "appropriate": true
+       }
+      ],
+      "preview_video": null,
+      "shop": {
+       "source": "website",
+       "id": 9146,
+       "title": "کلوزت",
+       "username": "closet",
+       "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/84fa7eff547bd183b6e29783d596cdb6.webp",
+       "is_verified": false,
+       "direct_purchase_enabled": true,
+       "rating": 0,
+       "fast_delivery_city": "",
+       "surveys_count": 0
+      },
+      "campaign_id": null,
+      "promotion_tag": {
+       "id": 53,
+       "title": "3 میلیون تخفیف با کد: closet70"
+      }
+     }
+    ],
+    "title": "<span>...</span>",
+    "title_simple": "کفش و کتونی با تنوع بالا"
+   },
+   "type": "product_slider"
+  }
+ ],
+ "description": "",
+ "id": 9,
+ "slug": "sale07",
+ "title": "فروش ویژه مهر"
+}

@@ -1,0 +1,83 @@
+{
+ "brands": [
+  {
+   "id": 12,
+   "title_en": "Tommy Hilfiger",
+   "title_fa": "تامی هیلفیگر",
+   "count": 255,
+   "category_ids": [
+    245,
+    246
+   ]
+  },
+  {
+   "id": 34,
+   "title_en": "Julius",
+   "title_fa": "جولیوس",
+   "count": 240,
+   "category_ids": [
+    245,
+    246
+   ]
+  },
+  {
+   "id": 22,
+   "title_en": "Swatch",
+   "title_fa": "سواچ",
+   "count": 235,
+   "category_ids": [
+    196,
+    210,
+    245,
+    246
+   ]
+  }
+ ],
+ "customer_rating": null,
+ "description": "گالری ساعت وستا با بیش از ۳۰ سال تجربه، یکی از معتبرترین مراجع عرضه ساعت‌های اورجینال و برند در ایران است. ما اینجا هستیم تا با حذف واسطه‌ها، مجموعه‌ای از ساعت‌های اصل با بهترین قیمت و گارانتی معتبر را مستقیماً به دست شما برسونیم.\nدر وستا، فقط ساعت‌های اورجینال از برندهایی مثل Omega، Fossil، Casio، Versace، Armani، Swatch و ده‌ها برند معتبر جهانی ارائه می‌شن. هدف ما فقط فروش نیست، بلکه خلق یک تجربه خرید خاص برای عاشقان ساعت‌های مچی و اکسسوری‌های لوکس است.\nبا خرید از شاپینو، از مزایایی مثل پشتیبانی تخصصی، خرید امن و قسطی، بهره‌مند شوید. \nاگه دنبال خرید ساعت اصل مردانه یا زنانه با طراحی خاص و اطمینان کامل هستید، وستا در شاپینو انتخابی مطمئن و حرفه‌ایه. همین حالا ویترین برندهای جهانی رو ببینید و انتخابی ماندگار داشته باشید.",
+ "direct_purchase_enabled": true,
+ "fast_delivery_city": "تهران",
+ "followers": 0,
+ "id": 1771,
+ "instagram_username": null,
+ "is_verified": false,
+ "landline_phone": null,
+ "landline_phone_prefix": null,
+ "main_categories": [
+  245,
+  246
+ ],
+ "mobile_phone": "09022067421",
+ "product_count_by_category": [
+  {
+   "category": 246,
+   "count": 1661
+  },
+  {
+   "category": 245,
+   "count": 1220
+  },
+  {
+   "category": 254,
+   "count": 146
+  }
+ ],
+ "products_count": 3242,
+ "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/95199aee31a57e739f2e6a9cfdf27802.webp",
+ "rating": 0,
+ "saved": false,
+ "show_banners": false,
+ "source": "shopfa",
+ "survey_report": {
+  "customer_satisfaction": 80,
+  "positive_high_quality": 100,
+  "positive_low_price": 100,
+  "positive_timely_delivery": 100
+ },
+ "surveys_count": 26,
+ "telegram_id": null,
+ "title": "وستاواچ",
+ "username": "vestawatch",
+ "website": "https://vesta.watch",
+ "whatsapp_number": "09022067421"
+}

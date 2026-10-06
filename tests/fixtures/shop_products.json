@@ -1,0 +1,189 @@
+{
+ "next": "https://api-go.shopino.app/api/v1/app/shops/489/products/?off=true&page=2&page_size=4&sort=-discount",
+ "results": [
+  {
+   "id": 2576020,
+   "datetime": "2026-09-05T10:49:16.272491Z",
+   "title": "7166-شلوار مام استایل آراد",
+   "category": 377,
+   "website_url": "https://papionlady.com/product/7166-شلوار-مام-استایل-آراد",
+   "in_stock": true,
+   "flash_sale": false,
+   "price": 898000,
+   "discounted_price": 400000,
+   "medias": [
+    {
+     "id": "2576020_abfec981",
+     "url": "https://cdn.shopino.app/media/products/wfull/70c4d8ee4b64894f2c99eb7610e10abe.webp",
+     "is_video": false,
+     "thumbnail": null,
+     "width": 3600,
+     "height": 4800,
+     "available_widths": [
+      190,
+      380,
+      280,
+      560,
+      420,
+      840
+     ],
+     "available_thumbnail_widths": [],
+     "appropriate": true
+    }
+   ],
+   "preview_video": null,
+   "shop": {
+    "source": "website",
+    "id": 489,
+    "title": "پاپیون لیدی",
+    "username": "papionlady",
+    "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/08b3a31f2fe089f62f2d0b76ed145957.svg",
+    "is_verified": false,
+    "direct_purchase_enabled": true,
+    "rating": 4.9,
+    "fast_delivery_city": "قم",
+    "surveys_count": 3507
+   },
+   "campaign_id": null,
+   "promotion_tag": null
+  },
+  {
+   "id": 2356851,
+   "datetime": "2026-06-09T16:26:33.548326Z",
+   "title": "6512-پیراهن بلند هوران",
+   "category": 385,
+   "website_url": "https://papionlady.com/product/6512-مانتو-بلند-هوران",
+   "in_stock": true,
+   "flash_sale": false,
+   "price": 1898000,
+   "discounted_price": 998000,
+   "medias": [
+    {
+     "id": "2356851_e170abc9",
+     "url": "https://cdn.shopino.app/media/products/wfull/e170abc910b6bbb939c88d8b37c9f344.webp",
+     "is_video": false,
+     "thumbnail": null,
+     "width": 1125,
+     "height": 1500,
+     "available_widths": [
+      190,
+      380,
+      280,
+      560,
+      420,
+      840
+     ],
+     "available_thumbnail_widths": [],
+     "appropriate": true
+    }
+   ],
+   "preview_video": null,
+   "shop": {
+    "source": "website",
+    "id": 489,
+    "title": "پاپیون لیدی",
+    "username": "papionlady",
+    "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/08b3a31f2fe089f62f2d0b76ed145957.svg",
+    "is_verified": false,
+    "direct_purchase_enabled": true,
+    "rating": 4.9,
+    "fast_delivery_city": "قم",
+    "surveys_count": 3507
+   },
+   "campaign_id": null,
+   "promotion_tag": null
+  },
+  {
+   "id": 2633609,
+   "datetime": "2026-09-19T12:50:53.479108Z",
+   "title": "7200-شلوار اسکینی بنتون",
+   "category": 377,
+   "website_url": "https://papionlady.com/product/7200-شلوار-اسکینی-بنتون-1",
+   "in_stock": true,
+   "flash_sale": false,
+   "price": 898000,
+   "discounted_price": 500000,
+   "medias": [
+    {
+     "id": "2633609_0770f43d",
+     "url": "https://cdn.shopino.app/media/products/wfull/344ffafdfe6ff09eb4af75c3f53661e4.webp",
+     "is_video": false,
+     "thumbnail": null,
+     "width": 3024,
+     "height": 4032,
+     "available_widths": [
+      190,
+      380,
+      280,
+      560,
+      420,
+      840
+     ],
+     "available_thumbnail_widths": [],
+     "appropriate": true
+    }
+   ],
+   "preview_video": null,
+   "shop": {
+    "source": "website",
+    "id": 489,
+    "title": "پاپیون لیدی",
+    "username": "papionlady",
+    "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/08b3a31f2fe089f62f2d0b76ed145957.svg",
+    "is_verified": false,
+    "direct_purchase_enabled": true,
+    "rating": 4.9,
+    "fast_delivery_city": "قم",
+    "surveys_count": 3507
+   },
+   "campaign_id": null,
+   "promotion_tag": null
+  },
+  {
+   "id": 2526591,
+   "datetime": "2026-08-16T07:19:01.512873Z",
+   "title": "6983-شومیز سیمین",
+   "category": 379,
+   "website_url": "https://papionlady.com/product/6983-شومیز-سیمین",
+   "in_stock": true,
+   "flash_sale": false,
+   "price": 1398000,
+   "discounted_price": 790000,
+   "medias": [
+    {
+     "id": "2526591_14d9a229",
+     "url": "https://cdn.shopino.app/media/products/wfull/87b7d43af13fd3d5c54ae6d54266d6c7.webp",
+     "is_video": false,
+     "thumbnail": null,
+     "width": 2971,
+     "height": 3962,
+     "available_widths": [
+      190,
+      380,
+      280,
+      560,
+      420,
+      840
+     ],
+     "available_thumbnail_widths": [],
+     "appropriate": true
+    }
+   ],
+   "preview_video": null,
+   "shop": {
+    "source": "website",
+    "id": 489,
+    "title": "پاپیون لیدی",
+    "username": "papionlady",
+    "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/08b3a31f2fe089f62f2d0b76ed145957.svg",
+    "is_verified": false,
+    "direct_purchase_enabled": true,
+    "rating": 4.9,
+    "fast_delivery_city": "قم",
+    "surveys_count": 3507
+   },
+   "campaign_id": null,
+   "promotion_tag": null
+  }
+ ]
+}

@@ -1,0 +1,448 @@
+{
+ "categories": [
+  {
+   "id": 358,
+   "name": "لباس زنانه",
+   "title": "لباس زنانه",
+   "slug": "women",
+   "landing_slug": null,
+   "parent": 314,
+   "size_types": []
+  },
+  {
+   "id": 381,
+   "name": "کت زنانه",
+   "title": "کت زنانه",
+   "slug": "coat",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 359,
+   "name": "بارانی زنانه",
+   "title": "بارانی زنانه",
+   "slug": "raincoat",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 314,
+   "name": "لباس",
+   "title": "لباس",
+   "slug": "clothing",
+   "landing_slug": "clothing",
+   "parent": null,
+   "size_types": []
+  },
+  {
+   "id": 387,
+   "name": "لباس مردانه",
+   "title": "لباس مردانه",
+   "slug": "men",
+   "landing_slug": null,
+   "parent": 314,
+   "size_types": []
+  },
+  {
+   "id": 385,
+   "name": "مانتو زنانه",
+   "title": "مانتو زنانه",
+   "slug": "maanto",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 292,
+   "name": "کیف",
+   "title": "کیف",
+   "slug": "bags",
+   "landing_slug": "bag",
+   "parent": null,
+   "size_types": []
+  },
+  {
+   "id": 333,
+   "name": "لباس بچه گانه دخترانه",
+   "title": "لباس بچه گانه دخترانه",
+   "slug": "girls",
+   "landing_slug": null,
+   "parent": 314,
+   "size_types": []
+  },
+  {
+   "id": 362,
+   "name": "پالتو زنانه",
+   "title": "پالتو زنانه",
+   "slug": "overcoat",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 259,
+   "name": "کفش",
+   "title": "کفش",
+   "slug": "shoes",
+   "landing_slug": "shoes",
+   "parent": null,
+   "size_types": []
+  },
+  {
+   "id": 315,
+   "name": "لباس بچه گانه پسرانه",
+   "title": "لباس بچه گانه پسرانه",
+   "slug": "boys",
+   "landing_slug": null,
+   "parent": 314,
+   "size_types": []
+  },
+  {
+   "id": 513,
+   "name": "لباس نوزادی",
+   "title": "لباس نوزادی",
+   "slug": "kids",
+   "landing_slug": null,
+   "parent": 314,
+   "size_types": []
+  },
+  {
+   "id": 173,
+   "name": "اکسسوری",
+   "title": "اکسسوری",
+   "slug": "accessory",
+   "landing_slug": null,
+   "parent": null,
+   "size_types": []
+  },
+  {
+   "id": 375,
+   "name": "سویشرت زنانه",
+   "title": "سویشرت زنانه",
+   "slug": "sweatshirt",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 243,
+   "name": "ساعت",
+   "title": "ساعت",
+   "slug": "watch",
+   "landing_slug": null,
+   "parent": null,
+   "size_types": []
+  },
+  {
+   "id": 386,
+   "name": "هودی زنانه",
+   "title": "هودی زنانه",
+   "slug": "hoodie",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 228,
+   "name": "زیور آلات",
+   "title": "زیور آلات",
+   "slug": "jewelry",
+   "landing_slug": null,
+   "parent": null,
+   "size_types": []
+  },
+  {
+   "id": 382,
+   "name": "لباس بافتنی زنانه",
+   "title": "لباس بافتنی زنانه",
+   "slug": "woven",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 406,
+   "name": "ورزش و سفر",
+   "title": "ورزش و سفر",
+   "slug": "sports",
+   "landing_slug": "sports",
+   "parent": null,
+   "size_types": []
+  },
+  {
+   "id": 380,
+   "name": "کاپشن زنانه",
+   "title": "کاپشن زنانه",
+   "slug": "jacket",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 361,
+   "name": "پافر زنانه",
+   "title": "پافر زنانه",
+   "slug": "puffer",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 223,
+   "name": "خانه",
+   "title": "خانه",
+   "slug": "home",
+   "landing_slug": null,
+   "parent": null,
+   "size_types": []
+  },
+  {
+   "id": 360,
+   "name": "بلوز زنانه",
+   "title": "بلوز زنانه",
+   "slug": "blouse",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 506,
+   "name": "لوازم دیجیتال",
+   "title": "لوازم دیجیتال",
+   "slug": "digital-appliances",
+   "landing_slug": null,
+   "parent": null,
+   "size_types": []
+  },
+  {
+   "id": 555,
+   "name": "طلا",
+   "title": "طلا",
+   "slug": "gold",
+   "landing_slug": null,
+   "parent": null,
+   "size_types": []
+  },
+  {
+   "id": 379,
+   "name": "شومیز زنانه",
+   "title": "شومیز زنانه",
+   "slug": "chemise",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 448,
+   "name": "آرایشی بهداشتی",
+   "title": "آرایشی بهداشتی",
+   "slug": "cosmetics",
+   "landing_slug": null,
+   "parent": null,
+   "size_types": []
+  },
+  {
+   "id": 368,
+   "name": "جلیقه زنانه",
+   "title": "جلیقه زنانه",
+   "slug": "vest",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 367,
+   "name": "تیشرت زنانه",
+   "title": "تیشرت زنانه",
+   "slug": "tshirt",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 249,
+   "name": "فرهنگ و هنر",
+   "title": "فرهنگ و هنر",
+   "slug": "culture-and-art",
+   "landing_slug": null,
+   "parent": null,
+   "size_types": []
+  },
+  {
+   "id": 365,
+   "name": "تاپ زنانه",
+   "title": "تاپ زنانه",
+   "slug": "top",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 170,
+   "name": "اسباب بازی،سیسمونی",
+   "title": "اسباب بازی،سیسمونی",
+   "slug": "toys",
+   "landing_slug": null,
+   "parent": null,
+   "size_types": []
+  },
+  {
+   "id": 372,
+   "name": "سارافون زنانه",
+   "title": "سارافون زنانه",
+   "slug": "sundress",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 534,
+   "name": "سلامت و پزشکی",
+   "title": "سلامت و پزشکی",
+   "slug": "health-care",
+   "landing_slug": null,
+   "parent": null,
+   "size_types": []
+  },
+  {
+   "id": 366,
+   "name": "تونیک زنانه",
+   "title": "تونیک زنانه",
+   "slug": "tunic",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 364,
+   "name": "پیراهن زنانه",
+   "title": "پیراهن زنانه",
+   "slug": "dress",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 373,
+   "name": "ست رسمی و کژوال زنانه",
+   "title": "ست رسمی و کژوال زنانه",
+   "slug": "formal-and-casual-set",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 374,
+   "name": "سرهمی زنانه",
+   "title": "سرهمی زنانه",
+   "slug": "jumpsuit",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 383,
+   "name": "لباس راحتی زنانه",
+   "title": "لباس راحتی زنانه",
+   "slug": "pajamas",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 377,
+   "name": "شلوار زنانه",
+   "title": "شلوار زنانه",
+   "slug": "pants",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 378,
+   "name": "شلوارک زنانه",
+   "title": "شلوارک زنانه",
+   "slug": "shorts",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 371,
+   "name": "دامن زنانه",
+   "title": "دامن زنانه",
+   "slug": "skirt",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 384,
+   "name": "لباس زیر زنانه",
+   "title": "لباس زیر زنانه",
+   "slug": "underwear",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 501,
+   "name": "بادی زنانه",
+   "title": "بادی زنانه",
+   "slug": "bodysuit",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 498,
+   "name": "گن زنانه",
+   "title": "گن زنانه",
+   "slug": "shapewear",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 369,
+   "name": "جوراب زنانه",
+   "title": "جوراب زنانه",
+   "slug": "socks",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 370,
+   "name": "جوراب شلواری زنانه",
+   "title": "جوراب شلواری زنانه",
+   "slug": "stockings",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 376,
+   "name": "شال و روسری",
+   "title": "شال و روسری",
+   "slug": "head-scarf",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  },
+  {
+   "id": 363,
+   "name": "پوشش اسلامی بانوان",
+   "title": "پوشش اسلامی بانوان",
+   "slug": "hijab",
+   "landing_slug": null,
+   "parent": 358,
+   "size_types": []
+  }
+ ],
+ "products_count": 964325,
+ "shops_count": 11651,
+ "user": null
+}

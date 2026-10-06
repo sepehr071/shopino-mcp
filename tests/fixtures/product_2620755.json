@@ -1,0 +1,275 @@
+{
+ "attributes": [
+  {
+   "key": "401",
+   "name": "رنگ",
+   "options": [
+    "استخوانی",
+    "سرمه ای",
+    "قهوه ای",
+    "مشکی"
+   ]
+  },
+  {
+   "key": "400",
+   "name": "سایز",
+   "options": [
+    "1",
+    "2"
+   ]
+  }
+ ],
+ "caption": "",
+ "category": 385,
+ "datetime": "2026-09-16T16:01:37.076285+03:30",
+ "discounted_price": null,
+ "flash_sale": false,
+ "freesize": false,
+ "id": 2620755,
+ "in_stock": true,
+ "like_status": false,
+ "likes": 658,
+ "medias": [
+  {
+   "id": "2620755_e757c299",
+   "url": "https://cdn.shopino.app/media/products/wfull/e757c2997d0f889fcbc966ed583c4695.webp",
+   "is_video": false,
+   "thumbnail": null,
+   "width": 1086,
+   "height": 1448,
+   "available_widths": [
+    190,
+    380,
+    280,
+    560,
+    420,
+    840
+   ],
+   "available_thumbnail_widths": [],
+   "appropriate": true
+  },
+  {
+   "id": "2620755_b243017a",
+   "url": "https://cdn.shopino.app/media/products/wfull/b243017a65f08bd9262c90bf5817e5a4.webp",
+   "is_video": false,
+   "thumbnail": null,
+   "width": 1086,
+   "height": 1448,
+   "available_widths": [
+    190,
+    380,
+    280,
+    560,
+    420,
+    840
+   ],
+   "available_thumbnail_widths": [],
+   "appropriate": true
+  }
+ ],
+ "notify_subscribed": false,
+ "originality": "made_in_iran",
+ "price": 4980000,
+ "promotion_tag": null,
+ "related_tags": [
+  {
+   "slug": "مانتو-بلند-مشکی-زنانه",
+   "title": "مانتو بلند مشکی زنانه"
+  },
+  {
+   "slug": "شومیز-مانتویی-تابستانه-زنانه",
+   "title": "شومیز مانتویی تابستانه زنانه"
+  },
+  {
+   "slug": "وست-جین-زنانه",
+   "title": "وست جین زنانه"
+  }
+ ],
+ "saved": false,
+ "shop": {
+  "address": null,
+  "customer_rating": null,
+  "direct_purchase_enabled": true,
+  "fast_delivery_city": "",
+  "followers": 0,
+  "id": 8578,
+  "instagram_username": "",
+  "is_verified": false,
+  "landline_phone": null,
+  "landline_phone_prefix": null,
+  "mobile_phone": null,
+  "products_count": 382,
+  "profile_pic": "https://cdn.shopino.app/media/shop_logos/wfull/e982906d047115471bf4e7f04989639b.webp",
+  "rating": 0,
+  "saved": false,
+  "source": "sourena",
+  "survey_report": null,
+  "surveys_count": 0,
+  "telegram_id": null,
+  "title": "وایت گالری پلاس",
+  "username": "whitepluss",
+  "website": "https://whitepluss.ir",
+  "whatsapp_number": null
+ },
+ "shortcode": null,
+ "size": null,
+ "size_guide": "",
+ "source": "sourena/8578",
+ "specs": null,
+ "title": "مانتو بزایاق بلند (1254)",
+ "variations": [
+  {
+   "attributes": [
+    {
+     "key": "401",
+     "name": "رنگ",
+     "option": "قهوه ای"
+    },
+    {
+     "key": "400",
+     "name": "سایز",
+     "option": "1"
+    }
+   ],
+   "discounted_price": null,
+   "id": 11038932,
+   "medias": [],
+   "price": 4980000,
+   "stock_quantity": 1
+  },
+  {
+   "attributes": [
+    {
+     "key": "401",
+     "name": "رنگ",
+     "option": "قهوه ای"
+    },
+    {
+     "key": "400",
+     "name": "سایز",
+     "option": "2"
+    }
+   ],
+   "discounted_price": null,
+   "id": 11038933,
+   "medias": [],
+   "price": 4980000,
+   "stock_quantity": 1
+  },
+  {
+   "attributes": [
+    {
+     "key": "400",
+     "name": "سایز",
+     "option": "1"
+    },
+    {
+     "key": "401",
+     "name": "رنگ",
+     "option": "استخوانی"
+    }
+   ],
+   "discounted_price": null,
+   "id": 11038934,
+   "medias": [],
+   "price": 4980000,
+   "stock_quantity": 1
+  },
+  {
+   "attributes": [
+    {
+     "key": "400",
+     "name": "سایز",
+     "option": "2"
+    },
+    {
+     "key": "401",
+     "name": "رنگ",
+     "option": "استخوانی"
+    }
+   ],
+   "discounted_price": null,
+   "id": 11038935,
+   "medias": [],
+   "price": 4980000,
+   "stock_quantity": 1
+  },
+  {
+   "attributes": [
+    {
+     "key": "401",
+     "name": "رنگ",
+     "option": "سرمه ای"
+    },
+    {
+     "key": "400",
+     "name": "سایز",
+     "option": "1"
+    }
+   ],
+   "discounted_price": null,
+   "id": 11038936,
+   "medias": [],
+   "price": 4980000,
+   "stock_quantity": 1
+  },
+  {
+   "attributes": [
+    {
+     "key": "401",
+     "name": "رنگ",
+     "option": "سرمه ای"
+    },
+    {
+     "key": "400",
+     "name": "سایز",
+     "option": "2"
+    }
+   ],
+   "discounted_price": null,
+   "id": 11038937,
+   "medias": [],
+   "price": 4980000,
+   "stock_quantity": 1
+  },
+  {
+   "attributes": [
+    {
+     "key": "401",
+     "name": "رنگ",
+     "option": "مشکی"
+    },
+    {
+     "key": "400",
+     "name": "سایز",
+     "option": "1"
+    }
+   ],
+   "discounted_price": null,
+   "id": 11038938,
+   "medias": [],
+   "price": 4980000,
+   "stock_quantity": 2
+  },
+  {
+   "attributes": [
+    {
+     "key": "401",
+     "name": "رنگ",
+     "option": "مشکی"
+    },
+    {
+     "key": "400",
+     "name": "سایز",
+     "option": "2"
+    }
+   ],
+   "discounted_price": null,
+   "id": 11038939,
+   "medias": [],
+   "price": 4980000,
+   "stock_quantity": 2
+  }
+ ],
+ "website_url": "https://whitepluss.ir/productList/مانتو-بزایاق-بلند-(1254)"
+}
