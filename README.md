@@ -179,7 +179,7 @@ There's no hosted server in between, no API key, and nothing about you is sent a
 | `sh_blog_post` | One blog post as plain text |
 </details>
 
-All tools are annotated `readOnlyHint: true` and return compact structured JSON, so they don't flood the agent's context.
+All 14 tools are annotated `readOnlyHint: true` and return compact structured JSON, so they don't flood the agent's context.
 
 ## Good to know
 
