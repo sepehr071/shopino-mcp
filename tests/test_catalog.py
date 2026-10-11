@@ -24,7 +24,9 @@ async def test_sh_search(client, api):
         "shop": "وایت گالری پلاس",
         "shop_id": 8578,
         "url": "https://shopino.app/product/2385657",
+        "image": "https://cdn.shopino.app/media/products/wfull/49035308e998c56c6cec2a40a1422d38.webp",
     }
+    assert all(p["image"].startswith("https://") for p in out["products"])
     # shop rating / courier city only when set; no discount -> price == final_price
     second, fourth = out["products"][1], out["products"][3]
     assert second["shop_rating"] == 4.6 and second["courier_city"] == "تهران"
@@ -85,6 +87,7 @@ async def test_sh_find_cheapest(client, api):
     prices = [o["final_price"] for o in out["offers"]]
     assert out["scanned"] == 12 and out["complete"] is True and len(prices) == 5 and prices == sorted(prices)
     assert prices[0] == 999000
+    assert all(o["image"].startswith("https://") for o in out["offers"])
     assert api.params() == {"sort": "price", "in_stock": "true", "page_size": "200"}
 
 
@@ -111,6 +114,7 @@ async def test_sh_browse_category(client, api):
     assert gone["id"] == 1768703 and gone["final_price"] is None and gone["price"] is None and not gone["in_stock"]
     # the product feed must be paged with its cursor: `page=N` drops the sort
     assert out["next_cursor"] == "page=3"
+    assert all(p["image"].startswith("https://") for p in out["products"])
     assert api.params() == {"category": "385", "sort": "price", "price_to": "3000000", "page_size": "8"}
 
 
@@ -119,6 +123,7 @@ async def test_sh_browse_shop(client, api):
     args = {"shop_id": 489, "sort": "biggest_discount", "discounted_only": True, "limit": 4, "cursor": "page=2"}
     out = (await client.call_tool("sh_browse", args)).structured_content
     assert [p["discount_pct"] for p in out["products"]] == [55, 47, 44, 43]
+    assert all(p["image"].startswith("https://") for p in out["products"])
     assert api.params() == {"sort": "-discount", "off": "true", "in_stock": "true", "page_size": "4", "page": "2"}
 
 
@@ -127,6 +132,7 @@ async def test_sh_browse_tag(client, api):
     args = {"tag": "مانتو-بلند-مشکی-زنانه", "sort": "cheapest"}
     out = (await client.call_tool("sh_browse", args)).structured_content
     assert [p["final_price"] for p in out["products"]] == [399000, 598000, 698000, 700000, 736000]
+    assert all(p["image"].startswith("https://") for p in out["products"])
     assert out["next_cursor"] == "offset=16" and api.params() == {"sort": "price"}
 
 
@@ -134,6 +140,7 @@ async def test_sh_browse_listing_on_django_host(client, api):
     api[f"{APP}/product-listings/پیراهن-مردانه/products/"] = fixture("listing.json")
     out = (await client.call_tool("sh_browse", {"listing": "پیراهن-مردانه", "limit": 4})).structured_content
     assert out["products"][0]["promo"] == "1 میلیون تخفیف با کد: benix7"
+    assert all(p["image"].startswith("https://") for p in out["products"])
     assert api.hosts() == ["api.shopino.app"] and api.params() == {"in_stock": "true", "limit": "4"}
     assert out["next_cursor"] == "offset=4"
 
@@ -219,6 +226,7 @@ async def test_sh_deals(client, api):
     }
     assert [c["slug"] for c in out["campaigns"]] == ["sale07", "gift-cards"]
     assert {"text": "1 میلیون تخفیف با کد: hana70", "shop": "هانا گالری"} in out["discount_codes"]
+    assert all(d["image"].startswith("https://") for d in out["deals"])
     pcts = [d["discount_pct"] for d in out["deals"]]
     assert out["count"] == 8 and len(pcts) == 4 and pcts == sorted(pcts, reverse=True) and pcts[0] == 69
     assert out["deals"][0]["flash_sale"] is True and out["deals"][0]["section"] == "شگفت\u200cانگیزها"
@@ -230,5 +238,6 @@ async def test_sh_campaign(client, api):
     assert out["title"] == "فروش ویژه مهر" and out["url"] == "https://shopino.app/landing/sale07"
     assert out["rows"][0]["title"] == "لباس میخری با تخفیف بالا" and out["rows"][0]["count"] == 3
     assert len(out["rows"][0]["products"]) == 2
+    assert all(p["image"].startswith("https://") for r in out["rows"] for p in r["products"])
     assert out["tabs"][0] == {"title": "چرمی\u200cهای پاییزه", "listing": "چرمی-های-پاییزه"}
     assert {"title": "پاییزه\u200cهای جدید", "shop_id": 7785} in out["tabs"]

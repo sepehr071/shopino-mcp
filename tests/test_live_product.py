@@ -21,6 +21,7 @@ async def test_sh_product(client):
     assert data["in_stock"] and data["final_price"] < data["price"] and data["discount_pct"] > 0
     assert data["variants"] and all("stock" in v for v in data["variants"])
     assert data["shop"]["id"] and data["original_url"]
+    assert data["image"].startswith("https://") and data["image"] in data["images"] and len(data["images"]) <= 4
 
 
 async def test_sh_similar(client):
@@ -28,3 +29,10 @@ async def test_sh_similar(client):
     data = await call(client, "sh_similar", {"product_id": product_id, "sort": "cheapest", "limit": 10})
     prices = [p["final_price"] for p in data["products"]]
     assert prices and prices == sorted(prices) and product_id not in [p["id"] for p in data["products"]]
+    assert all(p["image"].startswith("https://") for p in data["products"])
+
+
+async def test_sh_browse_images(client):
+    for args in ({"shop_id": 489, "limit": 5}, {"listing": "پیراهن-مردانه", "limit": 5}):
+        data = await call(client, "sh_browse", args)
+        assert data["products"] and all(p["image"].startswith("https://") for p in data["products"])

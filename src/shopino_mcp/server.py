@@ -31,6 +31,7 @@ Workflow:
 Conventions: all prices are Toman. final_price is what the customer pays, price is before discount
 (equal when there is none), discount_pct is an int; null prices = the shop shows no price. A product's
 price is its cheapest variant: check the chosen size / color in sh_product variants (stock = units).
+Every product has `image` (photo URL); sh_product also has `images`.
 Shop rating is 0-5 from buyer surveys (null = not rated); the stars the site shows are customer_rating
 (sh_product / sh_shop). flash_sale items are sorted and price-filtered by their pre-sale price, so they can
 appear out of order or under min_price. promo is a shop's offer, often with a

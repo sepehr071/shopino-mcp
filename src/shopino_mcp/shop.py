@@ -8,7 +8,7 @@ from typing import Annotated, Any, Literal
 from pydantic import Field
 
 from .catalog import APP, _categories
-from .http import SITE, api
+from .http import SITE, ApiError, api
 from .product import _shop
 from .registry import tool
 
@@ -104,7 +104,11 @@ async def sh_shop(
         "brands_count": len(s.get("brands") or []),
     }
     if similar_shops:
-        similar = await api(f"{APP}/shops/{s['id']}/similar-shops/", django=True)
+        try:
+            similar = await api(f"{APP}/shops/{s['id']}/similar-shops/", django=True)
+        except ApiError:  # the site dropped this endpoint (HTTP 404 since 2026-10): keep the profile
+            similar = []
+            out["note"] = "Similar shops are not available from Shopino right now."
         out["similar_shops"] = [
             {
                 "id": x.get("id"),

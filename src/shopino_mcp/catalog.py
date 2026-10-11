@@ -557,7 +557,14 @@ def _item(p: dict[str, Any]) -> dict[str, Any]:
     if promo := (p.get("promotion_tag") or {}).get("title"):
         out["promo"] = promo.strip()
     out["url"] = f"{SITE}/product/{p['id']}"
+    if image := _image(p):
+        out["image"] = image
     return out
+
+
+def _image(p: dict[str, Any]) -> str | None:
+    """The main photo (first non-video media) as an absolute https URL."""
+    return next((m["url"] for m in p.get("medias") or [] if m.get("url") and not m.get("is_video")), None)
 
 
 def _prices(p: dict[str, Any]) -> tuple[int | None, int | None, int]:

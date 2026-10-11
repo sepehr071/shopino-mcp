@@ -6,7 +6,7 @@ from typing import Annotated, Any, Literal
 
 from pydantic import Field
 
-from .catalog import APP, _items, _prices, _text
+from .catalog import APP, _image, _items, _prices, _text
 from .http import SITE, ApiError, api
 from .registry import tool
 
@@ -46,6 +46,7 @@ async def sh_product(product_id: ProductId) -> dict[str, Any]:
         **({"flash_sale": True} if p.get("flash_sale") else {}),
         **({"promo": promo.strip()} if (promo := (p.get("promotion_tag") or {}).get("title")) else {}),
         "tags": [{"slug": t.get("slug"), "title": t.get("title")} for t in p.get("related_tags") or []],
+        "image": _image(p),
         "images": [m.get("url") for m in p.get("medias") or [] if not m.get("is_video")][:4],
         "shop": _shop(shop),
         "original_url": p.get("website_url"),

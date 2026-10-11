@@ -51,6 +51,13 @@ async def test_sh_shop(client, api):
     assert api.calls[-1].url.host == "api.shopino.app"
 
 
+async def test_sh_shop_survives_missing_similar_shops(client, api):
+    api[f"{APP}/shops/papionlady/"] = fixture("shop_489.json")
+    api[f"{APP}/initial-info/"] = fixture("initial_info.json")
+    out = (await client.call_tool("sh_shop", {"shop": "papionlady", "similar_shops": True})).structured_content
+    assert out["id"] == 489 and out["similar_shops"] == [] and "not available" in out["note"]
+
+
 async def test_sh_shop_rejects_paths(client, api):
     result = await client.call_tool("sh_shop", {"shop": "../products"})
     assert result.is_error and not api.calls

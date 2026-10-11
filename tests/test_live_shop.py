@@ -16,5 +16,7 @@ async def test_sh_shops(client):
 
 async def test_sh_shop(client):
     data = await call(client, "sh_shop", {"shop": "papionlady", "similar_shops": True})
-    assert data["id"] == 489 and data["rating"] > 4 and data["survey_pct"]["satisfied"] > 50
-    assert data["categories"][0]["title"] and data["similar_shops"]
+    assert data["id"] == 489 and data["rating"] > 4 and data["surveys"] > 100
+    assert data["categories"][0]["title"]
+    # the site dropped shop survey_report (no survey_pct) and its similar-shops endpoint returns 404 now: the tool degrades to an empty list plus a note
+    assert data["similar_shops"] or "not available" in data["note"]

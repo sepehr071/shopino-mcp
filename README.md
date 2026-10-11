@@ -184,6 +184,7 @@ All 14 tools are annotated `readOnlyHint: true` and return compact structured JS
 ## Good to know
 
 - **Prices are in Toman.** `final_price` is what you pay, `price` is before discount, `discount_pct` is a whole percent. `null` means the shop shows no price (usually out of stock).
+- **Every product has an `image`** (absolute https URL of its first photo); `sh_product` also gives up to 4 in `images`.
 - **Sizes and colors can differ in price and stock.** A product's `final_price` is its cheapest variant; `sh_product` lists each color / size with its own price and `stock` (units left).
 - **Each product is sold by one shop.** Many can be bought in the Shopino cart; `shop_site_only` / `shopino_cart: false` means only on the shop's own site (`original_url`).
 - **Shipping is not public.** It is quoted per shop and address at checkout (needs a login), so the order total is items + the shop's shipping − one discount code. `courier_city` means same-day courier delivery in that city.

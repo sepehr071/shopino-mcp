@@ -13,6 +13,7 @@ async def test_sh_product_variants_and_stock(client, api):
     assert out["final_price"] == out["price"] == 4980000 and out["discount_pct"] == 0
     assert out["options"] == {"رنگ": ["استخوانی", "سرمه ای", "قهوه ای", "مشکی"], "سایز": ["1", "2"]}
     assert len(out["variants"]) == 8
+    assert out["image"].startswith("https://") and out["image"] in out["images"]
     assert out["variants"][0] == {
         "id": 11038932,
         "رنگ": "قهوه ای",
@@ -94,6 +95,7 @@ async def test_sh_similar_visual(client, api):
     out = (await client.call_tool("sh_similar", args)).structured_content
     assert out["count"] == 5 and 2578018 not in [p["id"] for p in out["products"]]  # the product itself is left out
     assert [p["final_price"] for p in out["products"]] == [624000, 700000, 749000]
+    assert all(p["image"].startswith("https://") for p in out["products"])
     assert api.params() == {"x": "0.025", "y": "0.025", "w": "0.95", "h": "0.95"}
 
 
@@ -101,3 +103,4 @@ async def test_sh_similar_related(client, api):
     api[f"{APP}/products/2578018/similar-products/"] = fixture("similar.json")
     out = (await client.call_tool("sh_similar", {"product_id": 2578018, "kind": "similar"})).structured_content
     assert out["count"] == 4 and out["products"][0]["id"] == 2200452 and len(api.calls) == 1
+    assert all(p["image"].startswith("https://") for p in out["products"])
