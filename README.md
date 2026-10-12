@@ -2,11 +2,11 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/sepehr071/shopino-mcp/main/.github/banner.png" alt="shopino-mcp: let your AI agent find the cheapest outfit across thousands of Iranian shops" width="100%">
+<img src="https://raw.githubusercontent.com/sepehr071/shopino-mcp/main/.github/banner.png" alt="shopino-mcp: unofficial Shopino MCP server for Claude, Cursor and Copilot" width="100%">
 
-# 👗 shopino-mcp
+# shopino-mcp: Shopino MCP server for AI agents 👗
 
-**Let your AI agent shop for clothes, bags and shoes across thousands of Iranian shops on Shopino.**<br>
+**Unofficial, read-only MCP server that lets your AI agent shop for clothes, bags and shoes across thousands of Iranian shops on Shopino (شاپینو).**<br>
 Search one catalog of about 960,000 products from 10,000 online and Instagram shops, compare real prices,<br>
 check which size and color is in stock, judge the shop, and catch today's flash sale, all from Claude, Cursor or Copilot.
 
@@ -19,11 +19,23 @@ check which size and color is in stock, judge the shop, and catch today's flash 
 [![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=shopino&config=eyJjb21tYW5kIjoidXZ4IiwiYXJncyI6WyJzaG9waW5vLW1jcCJdfQ==)
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_shopino--mcp-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=shopino&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22shopino-mcp%22%5D%7D)
 
-[Quick start](#quick-start) · [What it can do](#what-it-can-do) · [Tools](#tools) · [FAQ](#faq) · [فارسی](#فارسی)
+[Quick start](#quick-start) · [For AI agents](#for-ai-agents) · [What it can do](#what-it-can-do) · [Tools](#tools) · [FAQ](#faq) · [فارسی](#فارسی)
 
 </div>
 
 ---
+
+## For AI agents
+
+- **What:** unofficial MCP server for Shopino (shopino.app, شاپینو), an Iranian fashion marketplace that gathers products from thousands of online and Instagram shops. Queries work best in Persian; prices are in Toman.
+- **Install:** `claude mcp add shopino -- uvx shopino-mcp` (stdio transport, needs [uv](https://docs.astral.sh/uv/getting-started/installation/) and Python 3.10+).
+- **Auth:** none. Optional `SHOPINO_MCP_PROXY` sets an HTTP proxy for requests to shopino.app.
+- **Access:** read-only. No login, cart, orders or likes, so no write tools exist.
+- **Tools:** 14, all prefixed `sh_`. Start with `sh_find_cheapest`, `sh_search`, `sh_product`, `sh_shop` or `sh_deals`. Typical sequence: `sh_find_cheapest` → `sh_product` → `sh_shop`, then `sh_similar` to compare the same item at other shops.
+- **Use when:** comparing clothing, bag and shoe prices, sizes and stock, judging a shop by its rating and buyer surveys, or checking the flash sale and discount codes.
+- **Do not use when:** the user wants to buy something (no cart or checkout), or needs a shipping fee (quoted per shop and address at checkout, which needs a login).
+- **Output:** compact JSON. `final_price` is what the buyer pays, `price` is before discount, `discount_pct` is a whole percent, `null` price means no price shown (usually out of stock). Pass a product's `id` from `sh_search` or `sh_browse` as `product_id` to `sh_product` and `sh_similar`, and its `shop_id` to `sh_shop`. Page with the returned `next_cursor`.
+- **Machine-readable:** [`server.json`](server.json), and the catalog of all Iranian MCP servers at [awesome-iran-mcp](https://github.com/sepehr071/awesome-iran-mcp) ([TOOLS.md](https://github.com/sepehr071/awesome-iran-mcp/blob/main/TOOLS.md), [servers.json](https://github.com/sepehr071/awesome-iran-mcp/blob/main/servers.json), [llms.txt](https://github.com/sepehr071/awesome-iran-mcp/blob/main/llms.txt)).
 
 ## Why
 
@@ -207,6 +219,27 @@ review or ticket endpoints. The agent finds the best option; you buy it on shopi
 </details>
 
 <details>
+<summary><b>Is there a Shopino API or MCP server for AI agents?</b></summary>
+
+Shopino doesn't publish an official API for agents. `shopino-mcp` is an unofficial MCP server that wraps the public
+endpoints of shopino.app as 14 read-only tools, so any MCP client can search and compare products.
+</details>
+
+<details>
+<summary><b>How do I use Shopino with Claude, Cursor or Copilot?</b></summary>
+
+Install the server once (see [Quick start](#quick-start)), then ask in plain language, in Persian or English. In Claude Code
+the install is `claude mcp add shopino -- uvx shopino-mcp`.
+</details>
+
+<details>
+<summary><b>Is it official, safe and free?</b></summary>
+
+It is unofficial and free (MIT). It is read-only, needs no account or API key, and runs on your machine with no
+hosted server in between.
+</details>
+
+<details>
 <summary><b>How do I get more results?</b></summary>
 
 `sh_search` and `sh_browse` return a `next_cursor`. Pass it back as `cursor` with the same other arguments for the
@@ -248,11 +281,13 @@ npx @modelcontextprotocol/inspector uvx shopino-mcp
 |---|---|---|
 | `SHOPINO_MCP_PROXY` | unset | HTTP proxy for every request, e.g. `http://user:pass@host:port` |
 
-## فارسی
+<a id="فارسی"></a>
+
+## فارسی: سرور MCP شاپینو
 
 <div dir="rtl">
 
-**shopino-mcp** به دستیار هوش مصنوعی شما (Claude، Cursor، Copilot و ...) اجازه می&zwnj;دهد در شاپینو، میان محصولات هزاران
+**shopino-mcp** یک سرور MCP غیررسمی برای بازار اینترنتی ایرانی شاپینو است و به دستیار هوش مصنوعی شما (Claude، Cursor، Copilot و ...) اجازه می&zwnj;دهد در شاپینو، میان محصولات هزاران
 فروشگاه اینترنتی و اینستاگرامی جستجو کند، ارزان&zwnj;ترین محصول موجود را پیدا کند، موجودی هر رنگ و سایز را ببیند،
 امتیاز و نظرسنجی خریداران هر فروشگاه را بررسی کند و تخفیف&zwnj;های شگفت&zwnj;انگیز و کدهای تخفیف را پیدا کند.
 
@@ -272,6 +307,8 @@ claude mcp add shopino -- uvx shopino-mcp
 
 بعد بپرسید: «ارزان&zwnj;ترین مانتو کتان زنانه سایز L زیر ۲ میلیون تومان از یک فروشگاه خوش&zwnj;نام کدام است؟»
 
+برای جستجو کافی است محصول را به فارسی بنویسید و در صورت نیاز سایز، شهر یا فروشگاه را اضافه کنید، مثلاً «کفش ورزشی مردانه سایز ۴۰ با پیک در تهران».
+
 </div>
 
 ## Development
@@ -289,6 +326,14 @@ docstring that tells the agent when to use it. Issues and PRs are welcome, espec
 
 Releases: bump the version in `pyproject.toml` and `server.json`, then push a `v*` tag. GitHub Actions tests,
 publishes to PyPI and the [MCP Registry](https://registry.modelcontextprotocol.io), and creates the GitHub Release.
+
+## Related servers
+
+- [Khanoumi MCP server](https://github.com/sepehr071/khanoumi-mcp) for cosmetics and skin care prices
+- [Asal Banoo MCP server](https://github.com/sepehr071/asalbanoo-mcp) for skin care, hair care and make-up
+- All Iranian MCP servers: [awesome-iran-mcp](https://github.com/sepehr071/awesome-iran-mcp)
+
+If this saves you clicks, a star helps others find it.
 
 ## Disclaimer
 
