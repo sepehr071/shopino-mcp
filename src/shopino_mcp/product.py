@@ -16,19 +16,20 @@ ProductId = Annotated[
 
 
 @tool("Product details")
-async def sh_product(product_id: ProductId) -> dict[str, Any]:
-    """Get one product's full record: price and discount (Toman), every color / size variant with its own
-    price and units in stock, size guide, description, tags, the selling shop with its rating and
-    buyer survey, and the original link on the shop's own website.
+async def sh_product(
+    product_id: ProductId,
+    full_text: Annotated[bool, Field(description="Return size guide and description uncut.")] = False,
+) -> dict[str, Any]:
+    """Get one product's full record: price, every color / size variant with its own price and stock, size
+    guide, description, tags, the selling shop with trust signals, and the shop-site link.
 
-    Use after sh_search / sh_browse when the user picks a product, to check that their size and
-    color is in stock and what it costs, and whether the shop is trustworthy. Same item elsewhere:
-    sh_similar. More from the shop: sh_browse(shop_id=...). Related products: sh_browse(tag=...).
+    Use when the user picks a product, to check their size / color is in stock and the shop is trustworthy.
+    Same item elsewhere: sh_similar. More from the shop: sh_browse(shop_id=...). Related: sh_browse(tag=...).
     """
     p = await api(f"{APP}/products/{product_id}/")
     price, final, pct = _prices(p)
     shop = p.get("shop") or {}
-    return {
+    out = {
         "id": int(p["id"]),
         "title": (p.get("title") or "").strip(),
         "final_price": final,
@@ -39,8 +40,8 @@ async def sh_product(product_id: ProductId) -> dict[str, Any]:
         "options": {a.get("name"): a.get("options") or [] for a in p.get("attributes") or []},
         "variants": [_variant(v) for v in p.get("variations") or []],
         "freesize": bool(p.get("freesize")),
-        "size_guide": _clip(_text(p.get("size_guide")), 1500),
-        "description": _clip(_text(p.get("caption")), 1500),
+        "size_guide": _clip(_text(p.get("size_guide")), None if full_text else 800),
+        "description": _clip(_text(p.get("caption")), None if full_text else 1000),
         "made_in_iran": p.get("originality") == "made_in_iran" or None,
         "likes": p.get("likes"),
         **({"flash_sale": True} if p.get("flash_sale") else {}),
@@ -52,6 +53,8 @@ async def sh_product(product_id: ProductId) -> dict[str, Any]:
         "original_url": p.get("website_url"),
         "url": f"{SITE}/product/{p['id']}",
     }
+    # null prices are documented (shop shows no price); other empty fields are dropped
+    return {k: v for k, v in out.items() if v is not None or k in ("final_price", "price")}
 
 
 @tool("Similar products")
@@ -60,19 +63,18 @@ async def sh_similar(
     kind: Annotated[
         Literal["visual", "similar"],
         Field(
-            description="visual = products from all shops whose photo looks like this one (best to find the same item cheaper); similar = Shopino's 10 related products."
+            description="visual = photo-alike products from all shops (to find the same item cheaper); similar = Shopino's 10 related products."
         ),
     ] = "visual",
     sort: Annotated[
-        Literal["relevance", "cheapest"], Field(description="relevance (as returned) or cheapest first (price to pay).")
+        Literal["relevance", "cheapest"], Field(description="relevance (as returned) or cheapest first.")
     ] = "relevance",
     in_stock_only: Annotated[bool, Field(description="Only products in stock now.")] = True,
     limit: Annotated[int, Field(ge=1, le=100, description="Max products to return.")] = 20,
 ) -> dict[str, Any]:
-    """Find products like this one at other shops, with prices, discount, stock and shop.
+    """Find products like this one at other shops (itself left out).
 
-    Use when the product is out of stock, too expensive, or to check whether another shop sells the
-    same item cheaper (kind='visual', sort='cheapest'). The product itself is left out.
+    Use when it is out of stock or too expensive, or to find the same item cheaper (kind='visual', sort='cheapest').
     """
     if kind == "similar":
         data = await api(f"{APP}/products/{product_id}/similar-products/")
@@ -140,5 +142,6 @@ def _pct(x: float | None) -> int | None:
     return round(x) if x is not None else None
 
 
-def _clip(text: str, n: int) -> str | None:
-    return (text[:n] + "…" if len(text) > n else text) or None
+def _clip(text: str, n: int | None) -> str | None:
+    """Cut to n characters; n=None keeps the whole text."""
+    return (text[:n] + "…" if n and len(text) > n else text) or None

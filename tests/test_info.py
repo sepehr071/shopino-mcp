@@ -26,3 +26,11 @@ async def test_sh_blog_post(client, api):
     assert out["title"] == "مدل مانتو شب" and out["category_id"] == 385 and out["date"] == "2024-05-26"
     assert out["text"].startswith("مانتو، به عنوان") and out["text"].endswith("…") and len(out["text"]) == 501
     assert "<p>" not in out["text"]
+
+
+async def test_sh_blog_post_reaches_long_text(client, api):
+    api[f"{APP}/blog-posts/مدل-مانتو-شب/"] = {**fixture("blog_post.json"), "content": "<p>" + "د" * 7000 + "</p>"}
+    args = {"slug": "مدل-مانتو-شب"}
+    assert len((await client.call_tool("sh_blog_post", args)).structured_content["text"]) == 4001
+    out = (await client.call_tool("sh_blog_post", {**args, "max_chars": 20000})).structured_content
+    assert out["text"] == "د" * 7000

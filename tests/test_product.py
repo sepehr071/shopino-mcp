@@ -31,6 +31,18 @@ async def test_sh_product_variants_and_stock(client, api):
     assert "flash_sale" not in out
 
 
+async def test_sh_product_full_text(client, api):
+    api[f"{APP}/products/2620755/"] = {
+        **fixture("product_2620755.json"),
+        "caption": "د" * 1500,
+        "size_guide": "س" * 1200,
+    }
+    clipped = (await client.call_tool("sh_product", {"product_id": 2620755})).structured_content
+    assert clipped["description"] == "د" * 1000 + "…" and clipped["size_guide"] == "س" * 800 + "…"
+    full = (await client.call_tool("sh_product", {"product_id": 2620755, "full_text": True})).structured_content
+    assert full["description"] == "د" * 1500 and full["size_guide"] == "س" * 1200
+
+
 async def test_sh_product_flash_sale(client, api):
     # product 2529820 in the browser: flash sale, 1,899,000 -> 968,490 تومان "49% تخفیف"
     api[f"{APP}/products/2620755/"] = {

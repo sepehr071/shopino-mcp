@@ -99,3 +99,23 @@ async def test_browser_user_agent_and_no_env_proxy(client, api, monkeypatch):
     api[FEATURED] = []
     result = await client.call_tool("sh_brands", {})
     assert not result.is_error and "Chrome" in api.calls[0].headers["User-Agent"]
+
+
+async def test_503_is_retried_once(client, api):
+    replies = iter([httpx.Response(503), httpx.Response(200, json=[])])
+    api[FEATURED] = lambda r: next(replies)
+    result = await client.call_tool("sh_brands", {})
+    assert not result.is_error and len(api.calls) == 2
+
+
+async def test_initial_info_is_cached(client, api):
+    api["/api/v1/app/initial-info/"] = {"categories": [], "products_count": 1, "shops_count": 2}
+    for _ in range(2):
+        await client.call_tool("sh_categories", {})
+    assert len(api.calls) == 1
+
+
+async def test_input_schemas_have_no_title_noise(client):
+    for t in (await client.list_tools()).tools:
+        assert "title" not in t.input_schema
+        assert all("title" not in p for p in t.input_schema["properties"].values()), t.name

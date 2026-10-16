@@ -4,14 +4,15 @@ Shopino serves one REST API from two hosts with the same `/api/v1/app/...` paths
 (`api-go.shopino.app`: search, product lists, product page, shops, sliders, landings) and the Django
 backend (`api.shopino.app`: curated listings, similar shops, blog, courier cities). Each path lives on
 exactly one host; the other answers 404. Every tool goes through `api`. `_send` caps concurrency,
-retries once when the server drops the connection or answers 200 with an empty body, and turns HTTP
-failures into `ToolError` messages the model can act on.
+retries once (after a short fixed pause) when the server drops the connection, answers 502/503/504 or
+200 with an empty body, and turns HTTP failures into `ToolError` messages the model can act on.
 """
 
 from __future__ import annotations
 
 import asyncio
 import os
+import time
 from typing import Any
 
 import httpx
@@ -27,10 +28,13 @@ HEADERS = {
 }
 
 MAX_CONCURRENCY = 4
+RETRY_DELAY = 0.5  # seconds before the single retry of a GET
+CACHE_TTL = 3600  # seconds a cached static reply (category tree, courier cities) is reused
 
 _transport: httpx.AsyncBaseTransport | None = None
 _client: httpx.AsyncClient | None = None
 _limit: asyncio.Semaphore | None = None
+_cache: dict[tuple, tuple[float, Any]] = {}
 
 
 class ApiError(ToolError):
@@ -41,6 +45,7 @@ def set_transport(transport: httpx.AsyncBaseTransport | None) -> None:
     """Swap the transport (tests use httpx.MockTransport). Drops the current client."""
     global _transport, _client, _limit
     _transport, _client, _limit = transport, None, None
+    _cache.clear()
 
 
 def _get_client() -> tuple[httpx.AsyncClient, asyncio.Semaphore]:
@@ -51,7 +56,7 @@ def _get_client() -> tuple[httpx.AsyncClient, asyncio.Semaphore]:
         _client = httpx.AsyncClient(
             transport=_transport,
             headers=HEADERS,
-            timeout=30,
+            timeout=httpx.Timeout(30, connect=5),
             follow_redirects=True,
             trust_env=False,
             proxy=os.environ.get("SHOPINO_MCP_PROXY") or None,
@@ -72,6 +77,17 @@ async def api(path: str, params: dict[str, Any] | None = None, *, django: bool =
         raise ApiError(f"shopino.app returned a non-JSON response for {path} (HTTP {r.status_code}).") from e
 
 
+async def cached_api(path: str, params: dict[str, Any] | None = None, *, django: bool = False) -> Any:
+    """`api` with a TTL cache for static replies. The result is shared: callers must not mutate it."""
+    key = (path, django, tuple(sorted((params or {}).items())))
+    hit = _cache.get(key)
+    if hit and time.monotonic() - hit[0] < CACHE_TTL:
+        return hit[1]
+    data = await api(path, params, django=django)
+    _cache[key] = (time.monotonic(), data)
+    return data
+
+
 async def _send(url: str, **kwargs: Any) -> httpx.Response:
     client, limit = _get_client()
     for attempt in (1, 2):
@@ -86,8 +102,10 @@ async def _send(url: str, **kwargs: Any) -> httpx.Response:
                     f"Could not reach shopino.app ({type(e).__name__}). Check the internet connection, "
                     "or set SHOPINO_MCP_PROXY."
                 ) from e
+            await asyncio.sleep(RETRY_DELAY)
             continue
-        if r.status_code == 200 and not r.content and attempt == 1:  # seen once while mapping; a retry works
+        if attempt == 1 and (r.status_code in (502, 503, 504) or (r.status_code == 200 and not r.content)):
+            await asyncio.sleep(RETRY_DELAY)  # empty 200 seen once while mapping; a retry works
             continue
         break
     if r.status_code >= 400:

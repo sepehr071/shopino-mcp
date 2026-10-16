@@ -51,6 +51,15 @@ async def test_sh_shop(client, api):
     assert api.calls[-1].url.host == "api.shopino.app"
 
 
+async def test_sh_shop_full_text(client, api):
+    api[f"{APP}/shops/papionlady/"] = {**fixture("shop_489.json"), "description": "د" * 1500}
+    api[f"{APP}/initial-info/"] = fixture("initial_info.json")
+    out = (await client.call_tool("sh_shop", {"shop": "papionlady"})).structured_content
+    assert out["description"] == "د" * 1000 + "…"
+    out = (await client.call_tool("sh_shop", {"shop": "papionlady", "full_text": True})).structured_content
+    assert out["description"] == "د" * 1500
+
+
 async def test_sh_shop_survives_missing_similar_shops(client, api):
     api[f"{APP}/shops/papionlady/"] = fixture("shop_489.json")
     api[f"{APP}/initial-info/"] = fixture("initial_info.json")
@@ -60,4 +69,10 @@ async def test_sh_shop_survives_missing_similar_shops(client, api):
 
 async def test_sh_shop_rejects_paths(client, api):
     result = await client.call_tool("sh_shop", {"shop": "../products"})
+    assert result.is_error and not api.calls
+
+
+@pytest.mark.parametrize("shop", ["..", ".", "..."])
+async def test_sh_shop_rejects_dot_only(client, api, shop):
+    result = await client.call_tool("sh_shop", {"shop": shop})
     assert result.is_error and not api.calls
