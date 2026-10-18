@@ -1,8 +1,12 @@
+import asyncio
 import re
+import sys
 from pathlib import Path
 
 import httpx
 import pytest
+
+from shopino_mcp import http
 
 pytestmark = pytest.mark.anyio
 
@@ -52,16 +56,16 @@ async def test_network_error_after_retry(client, api):
     api[FEATURED] = down
     result = await client.call_tool("sh_brands", {})
     assert result.is_error and "Could not reach shopino.app (ConnectError)" in result.content[0].text
-    assert len(api.calls) == 2
+    assert len(api.calls) == 3
 
 
-async def test_timeout_is_not_retried(client, api):
+async def test_timeout_is_retried_twice(client, api):
     def slow(request):
         raise httpx.ReadTimeout("timed out", request=request)
 
     api[FEATURED] = slow
     result = await client.call_tool("sh_brands", {})
-    assert result.is_error and "did not answer in time" in result.content[0].text and len(api.calls) == 1
+    assert result.is_error and "did not answer in time" in result.content[0].text and len(api.calls) == 3
 
 
 @pytest.mark.parametrize(
@@ -98,7 +102,8 @@ async def test_browser_user_agent_and_no_env_proxy(client, api, monkeypatch):
     monkeypatch.setenv("HTTPS_PROXY", "http://127.0.0.1:1")  # must be ignored (trust_env=False)
     api[FEATURED] = []
     result = await client.call_tool("sh_brands", {})
-    assert not result.is_error and "Chrome" in api.calls[0].headers["User-Agent"]
+    h = api.calls[0].headers
+    assert not result.is_error and h["origin"] == "https://shopino.app" and h["sec-fetch-mode"] == "cors"
 
 
 async def test_503_is_retried_once(client, api):
@@ -119,3 +124,66 @@ async def test_input_schemas_have_no_title_noise(client):
     for t in (await client.list_tools()).tools:
         assert "title" not in t.input_schema
         assert all("title" not in p for p in t.input_schema["properties"].values()), t.name
+
+
+def test_is_challenge():
+    html = {"content-type": "text/html"}
+    assert http._is_challenge(httpx.Response(403, text="<html>Just a moment...</html>", headers=html))
+    assert not http._is_challenge(httpx.Response(403))
+    assert not http._is_challenge(httpx.Response(403, text="<html>Forbidden</html>", headers=html))
+    assert not http._is_challenge(httpx.Response(200, text="<html></html>", headers=html))
+
+
+async def test_proxy_list_rotates_and_stale_client_does_not(monkeypatch, api):
+    monkeypatch.setenv("SHOPINO_MCP_PROXY", "http://p1:1, http://p2:2")
+    assert http._proxies() == ["http://p1:1", "http://p2:2"]
+    old, _ = http._get_client()
+    http._next_proxy(old)
+    new, _ = http._get_client()
+    assert http._proxy_index == 1 and new is not old
+    http._next_proxy(old)  # a late failure on the retired client must not skip the proxy now in use
+    assert http._proxy_index == 1 and http._client is new
+
+
+async def test_challenge_cleared_by_browser_once(monkeypatch, api):
+    runs = []
+
+    async def fake_browser(proxy):
+        runs.append(proxy)
+        await asyncio.sleep(0.01)
+        return [{"name": "clearance", "value": "ok", "domain": ".shopino.app", "path": "/"}]
+
+    monkeypatch.setattr(http, "_browser_cookies", fake_browser)
+
+    def guarded(request):
+        if "clearance=ok" not in request.headers.get("cookie", ""):
+            return httpx.Response(403, text="<html>Just a moment</html>", headers={"content-type": "text/html"})
+        return httpx.Response(200, json=[])
+
+    api[FEATURED] = guarded
+    await asyncio.gather(http.api(FEATURED), http.api(FEATURED, {"a": 1}))
+    assert len(runs) == 1  # the second caller reused the cookies the first one fetched
+
+
+async def test_challenge_without_patchright(monkeypatch, api):
+    monkeypatch.setitem(sys.modules, "patchright.async_api", None)  # makes the import fail
+    api[FEATURED] = lambda r: httpx.Response(403, text="<html>Just a moment</html>")
+    with pytest.raises(http.ApiError, match=r"shopino-mcp\[browser\].*patchright install chromium"):
+        await http.api(FEATURED)
+
+
+async def test_403_is_not_retried_and_retry_after_is_honoured(monkeypatch, api):
+    waits = []
+
+    async def fake_sleep(s):
+        waits.append(s)
+
+    monkeypatch.setattr(http.asyncio, "sleep", fake_sleep)
+    api[FEATURED] = lambda r: httpx.Response(403)
+    with pytest.raises(http.ApiError):
+        await http.api(FEATURED)
+    assert len(api.calls) == 1
+    replies = iter([httpx.Response(429, headers={"Retry-After": "999"}), httpx.Response(200, json=[])])
+    api[FEATURED] = lambda r: next(replies)
+    await http.api(FEATURED)
+    assert len(api.calls) == 3 and http.MAX_RETRY_WAIT in waits

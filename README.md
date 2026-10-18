@@ -29,7 +29,7 @@ check which size and color is in stock, judge the shop, and catch today's flash 
 
 - **What:** unofficial MCP server for Shopino (shopino.app, شاپینو), an Iranian fashion marketplace that gathers products from thousands of online and Instagram shops. Queries work best in Persian; prices are in Toman.
 - **Install:** `claude mcp add shopino -- uvx shopino-mcp` (stdio transport, needs [uv](https://docs.astral.sh/uv/getting-started/installation/) and Python 3.10+).
-- **Auth:** none. Optional `SHOPINO_MCP_PROXY` sets an HTTP proxy for requests to shopino.app.
+- **Auth:** none. Optional `SHOPINO_MCP_PROXY` sets an HTTP proxy (or a comma-separated list) for requests to shopino.app.
 - **Access:** read-only. No login, cart, orders or likes, so no write tools exist.
 - **Tools:** 14, all prefixed `sh_`. Start with `sh_find_cheapest`, `sh_search`, `sh_product`, `sh_shop` or `sh_deals`. Typical sequence: `sh_find_cheapest` → `sh_product` → `sh_shop`, then `sh_similar` to compare the same item at other shops.
 - **Use when:** comparing clothing, bag and shoe prices, sizes and stock, judging a shop by its rating and buyer surveys, or checking the flash sale and discount codes.
@@ -257,8 +257,10 @@ matches lie past that, so raise `scan` (up to 1,000) or narrow with `category_id
 <details>
 <summary><b>I get "Could not reach shopino.app"</b></summary>
 
-The server retries a dropped connection once. If it still fails, check your internet connection. System proxy
-variables are ignored on purpose; set `SHOPINO_MCP_PROXY` if you need a proxy.
+The server retries a dropped connection or a 429/5xx reply twice with a short backoff. If it still fails, check your
+internet connection. System proxy variables are ignored on purpose; set `SHOPINO_MCP_PROXY` if you need a proxy. If
+Shopino serves a bot-check page, install the browser extra (`pip install shopino-mcp[browser]`, then
+`patchright install chromium`) so a headless browser can clear it.
 </details>
 
 <details>
@@ -279,7 +281,7 @@ npx @modelcontextprotocol/inspector uvx shopino-mcp
 
 | Variable | Default | Meaning |
 |---|---|---|
-| `SHOPINO_MCP_PROXY` | unset | HTTP proxy for every request, e.g. `http://user:pass@host:port` |
+| `SHOPINO_MCP_PROXY` | unset | HTTP proxy for every request, e.g. `http://user:pass@host:port`. A comma-separated list is used one at a time: the next proxy takes over when one is blocked (403/429) or cannot connect |
 
 <a id="فارسی"></a>
 
