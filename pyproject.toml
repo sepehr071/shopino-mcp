@@ -1,13 +1,13 @@
 [project]
 name = "shopino-mcp"
-version = "0.4.0"
+version = "0.4.1"
 description = "Unofficial read-only MCP server for Shopino: search fashion from thousands of Iranian shops, compare prices, sizes and stock, rate shops, find deals."
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{ name = "Sepehr Radmard", email = "sepehrr80@gmail.com" }]
 requires-python = ">=3.10"
-keywords = ["mcp", "model-context-protocol", "shopino", "iran", "e-commerce", "shopping", "fashion", "clothing"]
+keywords = ["mcp", "mcp-server", "model-context-protocol", "shopino", "iran", "persian", "farsi", "e-commerce", "shopping", "fashion", "clothing", "price-comparison", "ai-agents", "claude", "marketplace"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
