@@ -22,7 +22,7 @@ Query = Annotated[
     Field(
         min_length=2,
         max_length=100,
-        description="Keyword, Persian works best, e.g. 'مانتو کتان'.",
+        description="Keyword, Persian best, e.g. 'مانتو کتان'.",
     ),
 ]
 CategoryId = Annotated[
@@ -30,7 +30,7 @@ CategoryId = Annotated[
     Field(
         ge=1,
         le=100_000,
-        description="Category id from sh_categories, e.g. 385; includes sub-categories.",
+        description="Category id (sh_categories), includes sub-categories.",
     ),
 ]
 SlugText = Annotated[str | None, Field(pattern=r"^[^/?#.%\s\\]{1,100}$")]
@@ -43,7 +43,7 @@ City = Annotated[
     Field(
         min_length=2,
         max_length=40,
-        description="Same-day courier city, e.g. 'تهران' (sh_filters).",
+        description="Same-day courier city, e.g. 'تهران'.",
     ),
 ]
 
@@ -56,7 +56,7 @@ SORTS = {
 }
 Sort = Annotated[
     Literal["relevance", "cheapest", "most_expensive", "newest", "biggest_discount"],
-    Field(description="Order; cheapest / most_expensive use the price to pay."),
+    Field(description="cheapest / most_expensive use the price to pay."),
 ]
 
 # The size filter of the site (bundle constant): size system -> allowed values.
@@ -82,13 +82,13 @@ SIZE_TITLES = {
 }
 SizeSystem = Annotated[
     Literal["standard", "european", "shoe", "kid_shoe", "pants", "underwear", "baby", "kid", "freesize"] | None,
-    Field(description="Size system for `sizes` (values: sh_filters); freesize = only free-size items."),
+    Field(description="Size system for `sizes` (sh_filters); freesize = free-size items only."),
 ]
 Cursor = Annotated[
     str | None,
     Field(
         pattern=r"^[A-Za-z0-9_%=&.~+-]{1,600}$",
-        description="next_cursor of the previous reply (keep the other arguments the same).",
+        description="next_cursor of the previous reply.",
     ),
 ]
 # Query keys of a list's `next` URL that carry the paging state. Product lists must be paged this way:
@@ -118,8 +118,7 @@ async def sh_search(
 ) -> dict[str, Any]:
     """Search products across all shops by keyword: price to pay, discount, stock, selling shop.
 
-    Use first for "price of X" / "where to buy X". Cheapest matches as one flat list: sh_find_cheapest.
-    Variants (size, color, stock): sh_product. Next page: pass next_cursor back as cursor.
+    Use first for "price of X" / "where to buy X". Cheapest as a flat list: sh_find_cheapest. Sizes: sh_product.
     """
     _check_range(min_price, max_price)
     params = _filters(
@@ -143,16 +142,13 @@ async def sh_find_cheapest(
     query: Query,
     category_id: CategoryId = None,
     city: City = None,
-    match_all_words: Annotated[
-        bool, Field(description="Keep only products whose title or shop name has every query word.")
-    ] = True,
+    match_all_words: Annotated[bool, Field(description="Title or shop name must have every query word.")] = True,
     scan: Annotated[int, Field(ge=50, le=1000, description="Max results to scan, cheapest first.")] = 400,
     limit: Annotated[int, Field(ge=1, le=50, description="Max offers to return.")] = 20,
 ) -> dict[str, Any]:
     """Find the cheapest in-stock products for a keyword across all shops, one flat list sorted by price to pay.
 
-    Use for the lowest price of X. Drops loose matches (match_all_words) and unpriced items. Price is the
-    cheapest variant: check size / color with sh_product. complete=false: more matches past `scanned`, raise scan.
+    Use for the lowest price of X. Drops loose matches and unpriced items. complete=false: raise scan.
     """
     words = _norm(query).split()
     offers: list[dict[str, Any]] = []
@@ -183,15 +179,11 @@ async def sh_browse(
     shop_id: Annotated[int | None, Field(ge=1, description="One shop's id (sh_shops), e.g. 489.")] = None,
     tag: Annotated[
         SlugText,
-        Field(
-            description="Tag slug from sh_product `tags`, e.g. 'مانتو-بلند-مشکی-زنانه'. Only sort, in_stock_only, discounted_only apply."
-        ),
+        Field(description="Tag slug from sh_product `tags`. Only sort, in_stock_only, discounted_only apply."),
     ] = None,
     listing: Annotated[
         SlugText,
-        Field(
-            description="Listing slug from sh_campaign tabs, e.g. 'پیراهن-مردانه'. Only sort, in_stock_only, discounted_only apply."
-        ),
+        Field(description="Listing slug from sh_campaign tabs. Only sort, in_stock_only, discounted_only apply."),
     ] = None,
     sort: Sort = "relevance",
     in_stock_only: InStock = True,
@@ -210,9 +202,8 @@ async def sh_browse(
 ) -> dict[str, Any]:
     """List products of a category, shop, tag or curated listing, with sort, price range and filters.
 
-    Use for "cheapest manteau in size L under 2,000,000 Toman", "newest of shop X", "biggest discounts in bags"
-    (discounted_only + biggest_discount). With no category / shop / tag / listing it browses all shops.
-    Ids: sh_categories, sh_shops, sh_brands; sizes: sh_filters. Next page: pass next_cursor back as cursor.
+    Use for "cheapest manteau in size L under 2,000,000 Toman" or "biggest discounts in bags". With no
+    category / shop / tag / listing it browses all shops. Ids: sh_categories, sh_shops, sh_brands; sizes: sh_filters.
     """
     if sum(x is not None for x in (shop_id, tag, listing)) > 1:
         raise ApiError("Pass at most one of shop_id, tag or listing.")
@@ -262,13 +253,13 @@ async def sh_browse(
 @tool("Filters for listings")
 async def sh_filters(
     category_id: Annotated[
-        int | None, Field(ge=1, le=100_000, description="Category id (sh_categories): adds its sub-categories.")
+        int | None, Field(ge=1, le=100_000, description="Category id (sh_categories): adds sub-categories.")
     ] = None,
 ) -> dict[str, Any]:
     """List the filter values sh_search / sh_browse accept: size systems and sizes, sorts, courier cities,
-    and (with category_id) a category's sub-categories.
+    and (with category_id) sub-categories.
 
-    Use before filtering by size or city. Price range is free (Toman); brand ids: sh_brands. No color filter works.
+    Use before filtering by size or city.
     """
     info, cities = await asyncio.gather(
         cached_api(f"{APP}/initial-info/"), cached_api(f"{APP}/cities-list/", django=True)
@@ -295,17 +286,14 @@ async def sh_categories(
         str | None,
         Field(
             min_length=2,
-            description="Filter on Persian name or English slug path, any level, e.g. 'مانتو' or 'sneakers'.",
+            description="Persian name or English slug path, e.g. 'مانتو' or 'sneakers'.",
         ),
     ] = None,
-    max_level: Annotated[
-        int, Field(ge=1, le=5, description="Deepest level without a query (1 = the 14 top categories).")
-    ] = 2,
+    max_level: Annotated[int, Field(ge=1, le=5, description="Deepest level without a query.")] = 2,
 ) -> dict[str, Any]:
     """List the category tree with ids, URL paths and levels, plus total product and shop counts.
 
-    Use to get a category_id for sh_search / sh_browse / sh_find_cheapest. Without a query only levels up to
-    max_level are listed; with a query every level is searched.
+    Use to get a category_id. A query searches every level; without one only levels up to max_level are listed.
     """
     info = await cached_api(f"{APP}/initial-info/")
     categories = list(_categories(info).values())
@@ -328,8 +316,8 @@ async def sh_brands(
         int | None, Field(ge=1, description="Watch shop id, e.g. 1771: lists its brands with brand ids.")
     ] = None,
 ) -> dict[str, Any]:
-    """Without shop_id: featured official brand shops (browse one with sh_browse(shop_id=...)). With shop_id:
-    the brands that shop sells, with ids for the brand_id filter of sh_browse (watch shops only).
+    """Without shop_id: featured official brand shops. With shop_id: that watch shop's brands, with ids for
+    the brand_id filter of sh_browse.
     """
     if shop_id is None:
         data = await api(f"{APP}/featured-brands/")
@@ -362,8 +350,7 @@ async def sh_deals(
     """List today's home-page deals (flash sale with end time, best sellers, themed rows), biggest discount
     first, plus running campaigns and shop discount codes.
 
-    Use for "what's on sale". Open a campaign: sh_campaign(slug); a category's discounts:
-    sh_browse(discounted_only=true, sort='biggest_discount').
+    Use for "what's on sale". Open a campaign: sh_campaign(slug).
     """
     sliders, banners = await asyncio.gather(api(f"{APP}/product-sliders/"), api(f"{APP}/banners/"))
     sections, deals, seen, codes = [], [], set(), {}
@@ -404,14 +391,14 @@ async def sh_campaign(
         str,
         Field(
             pattern=r"^[A-Za-z0-9_-]{1,60}$",
-            description="Slug from sh_deals campaigns, e.g. 'sale07', or 'clothing', 'bag', 'shoes', 'sports'.",
+            description="Slug from sh_deals campaigns, e.g. 'sale07', 'clothing', 'bag'.",
         ),
     ],
     per_row: Annotated[int, Field(ge=1, le=12, description="Products per row.")] = 6,
 ) -> dict[str, Any]:
     """Open a campaign or landing page: its product rows (with prices) and tabs.
 
-    A tab's source: `listing` -> sh_browse(listing=...), `shop_id` / `category_id` -> sh_browse(same), `flash_sale` -> sh_deals.
+    A tab's `listing` / `shop_id` / `category_id` go to sh_browse; `flash_sale` -> sh_deals.
     """
     data = await api(f"{APP}/landings/{slug}/")
     rows, tabs = [], []

@@ -24,7 +24,7 @@ async def sh_blog_search(
 ) -> dict[str, Any]:
     """Search the style blog (guides and model galleries), newest first; no query = latest posts.
 
-    Use for what is in fashion or which model to choose; read a post with sh_blog_post(slug), then sh_search.
+    Use for what is in fashion; read a post with sh_blog_post(slug).
     """
     data = await api(
         f"{APP}/blog-posts/",

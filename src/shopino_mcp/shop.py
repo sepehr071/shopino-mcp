@@ -37,8 +37,7 @@ async def sh_shops(
 ) -> dict[str, Any]:
     """Find shops by name, category group, gender or courier city, with rating, surveys, followers and product count.
 
-    Use to get a shop_id for sh_shop / sh_browse / sh_search, or "best-known women's clothing shops in Tehran"
-    (order='most_followed').
+    Use to get a shop_id for sh_shop / sh_browse / sh_search.
     """
     data = await api(
         "/api/v2/app/shops/",
@@ -91,8 +90,7 @@ async def sh_shop(
     """Get a shop's profile: ratings, buyer survey %, followers, product count, main categories, courier city,
     contacts and website.
 
-    Use to judge whether a shop is trustworthy. Its products: sh_browse(shop_id=...) or sh_search(shop_id=...);
-    its brands (watch shops): sh_brands.
+    Use to judge whether a shop is trustworthy. Its products: sh_browse(shop_id=...); its brands: sh_brands.
     """
     s, info = await asyncio.gather(api(f"{APP}/shops/{shop}/"), cached_api(f"{APP}/initial-info/"))
     tree = _categories(info)

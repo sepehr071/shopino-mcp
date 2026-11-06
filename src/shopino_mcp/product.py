@@ -20,11 +20,10 @@ async def sh_product(
     product_id: ProductId,
     full_text: Annotated[bool, Field(description="Return size guide and description uncut.")] = False,
 ) -> dict[str, Any]:
-    """Get one product's full record: price, every color / size variant with its own price and stock, size
-    guide, description, tags, the selling shop with trust signals, and the shop-site link.
+    """Get one product's full record: price, every color / size variant with price and stock, size guide,
+    description, tags, the selling shop with trust signals, and the shop-site link.
 
-    Use when the user picks a product, to check their size / color is in stock and the shop is trustworthy.
-    Same item elsewhere: sh_similar. More from the shop: sh_browse(shop_id=...). Related: sh_browse(tag=...).
+    Use to check a size / color is in stock and the shop is trustworthy. Same item elsewhere: sh_similar.
     """
     p = await api(f"{APP}/products/{product_id}/")
     price, final, pct = _prices(p)
@@ -62,9 +61,7 @@ async def sh_similar(
     product_id: ProductId,
     kind: Annotated[
         Literal["visual", "similar"],
-        Field(
-            description="visual = photo-alike products from all shops (to find the same item cheaper); similar = Shopino's 10 related products."
-        ),
+        Field(description="visual = photo-alike products from all shops; similar = Shopino's 10 related products."),
     ] = "visual",
     sort: Annotated[
         Literal["relevance", "cheapest"], Field(description="relevance (as returned) or cheapest first.")
@@ -74,7 +71,7 @@ async def sh_similar(
 ) -> dict[str, Any]:
     """Find products like this one at other shops (itself left out).
 
-    Use when it is out of stock or too expensive, or to find the same item cheaper (kind='visual', sort='cheapest').
+    Use when it is out of stock or too dear (kind='visual', sort='cheapest' finds the same item cheaper).
     """
     if kind == "similar":
         data = await api(f"{APP}/products/{product_id}/similar-products/")
