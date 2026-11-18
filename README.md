@@ -20,7 +20,7 @@ search one catalog, compare real prices, check which size and color is in stock,
 [![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=shopino&config=eyJjb21tYW5kIjoidXZ4IiwiYXJncyI6WyJzaG9waW5vLW1jcCJdfQ==)
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_shopino--mcp-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=shopino&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22shopino-mcp%22%5D%7D)
 
-[For AI agents](#for-ai-agents) · [Why](#why) · [What it can do](#what-it-can-do) · [Quick start](#quick-start) · [Tools](#tools) · [How it works](#how-it-works) · [Good to know](#good-to-know) · [FAQ](#faq) · [Configuration](#configuration) · [فارسی](#فارسی) · [Development](#development) · [Related](#related-servers)
+[For AI agents](#for-ai-agents) · [Why](#why) · [What it can do](#what-it-can-do) · [Quick start](#quick-start) · [Tools](#tools) · [Good to know](#good-to-know) · [FAQ](#faq) · [Configuration](#configuration) · [فارسی](#فارسی) · [Development](#development) · [Related](#related-servers)
 
 </div>
 
@@ -220,25 +220,6 @@ Every list returns compact product cards (id, title, price, discount, stock, sho
 </details>
 
 All 14 tools are annotated `readOnlyHint: true` and return compact structured JSON, so they don't flood the agent's context.
-
-## How it works
-
-```text
-  AI agent  (Claude, Cursor, Copilot, ...)
-      │
-      │  MCP over stdio
-      ▼
-  shopino-mcp  (runs on your machine)
-      │
-      │  HTTPS
-      ├──────▶  api-go.shopino.app   search, products, shops, deals
-      └──────▶  api.shopino.app      curated listings, similar shops, blog
-```
-
-`shopino-mcp` runs locally and calls the same public endpoints the shopino.app website uses.
-There's no hosted server in between, no API key, and nothing about you is sent anywhere else.
-Requests go out with a browser-like TLS fingerprint, at most two at a time with a short random pause, and
-the server retries a timeout, 429 or 5xx reply twice with backoff.
 
 ## Good to know
 
